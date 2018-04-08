@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 from albums_repository import JsonAlbumsRepository
 from albums_service import AlbumsService
@@ -25,10 +25,21 @@ def products():
 def article(id):
     album_id = id
     try:
-        album = albums_service.find_album_by_id(album_id)
+        album = albums_service.find_album_by_id(int(album_id))
         return render_template('album.html', album=album)
     except:
         return render_template('not_found.html')
+
+
+@app.route('/albums/<int:id>/tracks/')
+def chanson(id):
+    album_id = id
+    try:
+        album = albums_service.find_album_by_id(int(album_id))
+        return render_template('track.html', album=album)
+    except:
+        return render_template('not_found.html')
+
 
 
 if __name__ == '__main__':
