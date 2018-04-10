@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+        <br>
+		<h1>Chansons</h1>
+		<p class="lead">Les chansons disponible sont .</p>
+
+		<div class="container">
+			<div class="row">
+			{% for track in tracks %}
+				<div class="card col-md-4" style="width: 18rem;">
+					<div class="card-body">
+	            	<h3>{{track.duration}}</h3>
+	            	<p><a class="btn btn-secondary" href="tracks/{{track.id}}" role="button">Écouter chanson </a></p>
+				  </div>
+				</div>
+			{% endfor %}
+			</div>
+		</div>
+{% endblock %}

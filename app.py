@@ -4,6 +4,8 @@ from wtforms import Form, StringField, TextAreaField, PasswordField, validators
 from passlib.hash import sha256_crypt
 from albums_repository import JsonAlbumsRepository
 from albums_service import AlbumsService
+from tracks_repository import  JsonTrackRepository
+from tracks_service import TracksService
 
 app = Flask(__name__)
 #config MySQL
@@ -16,6 +18,10 @@ mysql = MySQL(app)
 # dependencies injection #
 album_repository = JsonAlbumsRepository("albums.json")
 albums_service = AlbumsService(album_repository)
+tracks_repository = JsonAlbumsRepository("tracks.json")
+tracks_service = TracksService(tracks_repository)
+
+
 ########################################
 
 
@@ -39,14 +45,10 @@ def article(id):
         return render_template('not_found.html')
 
 
-@app.route('/albums/<int:id>/tracks/')
-def chanson(id):
-    album_id = id
-    try:
-        album = albums_service.find_album_by_id(int(album_id))
-        return render_template('track.html', album=album)
-    except:
-        return render_template('not_found.html')
+@app.route('/tracks')
+def chanson():
+    return render_template('tracks.html', tracks= tracks_service.get_all_tracks())
+
 
 class RegisterForm(Form):
 
