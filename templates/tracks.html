@@ -10,8 +10,10 @@
 			{% for track in tracks %}
 				<div class="card col-md-4" style="width: 18rem;">
 					<div class="card-body">
-	            	<h3>{{track.duration}}</h3>
+						<h3>{{track.name}}</h3>
+	            		<h3>{{track.duration}}</h3>
 	            	<p><a class="btn btn-secondary" href="tracks/{{track.id}}" role="button">Écouter chanson </a></p>
+					<p><a class="btn btn-secondary" href="tracks/{{track.id}}" role="button"> add to playlist </a></p>
 				  </div>
 				</div>
 			{% endfor %}

@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+        <br>
+		<h1>Artistes</h1>
+		<p class="lead">Un artiste est un individu faisant (une) œuvre, cultivant ou maîtrisant un art,
+            un savoir, une technique, et dont on remarque entre autres la créativité, la poésie, l'originalité de sa production,
+            de ses actes, de ses gestes Ses œuvres sont source d'émotions, de sentiments, de réflexion, de spiritualité ou de transcendances.
+            Dans un sens commun, et plutôt péjorativement ou pour la disqualifier, on parle également d'artiste ou de poète à propos d'une personne étrange,
+            marginale, oisive, rêveuse, qui fait n'importe quoi1, de quelqu'un qui n'a pas le sens des réalités, des règles
+            , et est parfois considéré comme rebelle ou fou2 mais qui peut aussi à l'inverse être apprécié comme faisant preuve de .</p>
+
+		<div class="container">
+			<div class="row">
+			{% for artiste in Artistes%}
+				<div class="card col-md-4" style="width: 18rem;">
+				  <img src="{{artiste.image}}" style="height: 18rem">
+				  <div class="card-body">
+	            	<h3>{{artiste.name}}</h3>
+	            	<p><a class="btn btn-secondary" href="Artistes/{{artiste.id}}" role="button"> Voir ces albums</a></p>
+				  </div>
+				</div>
+			{% endfor %}
+			</div>
+		</div>
+{% endblock %}

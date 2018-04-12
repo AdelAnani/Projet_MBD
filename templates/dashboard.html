@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Dashboard <small> Welcome {{session.username}}</small></h1>
+  <a class="btn btn-success" href="/add_playlist"> add plylist</a>
+      <div class="container">
+			{% for playlist in Playlists %}
+				  <div class="card-body">
+                      <li class="list-group-item >  <a class="btn btn-success" href="/add_playlist"> {{playlist.name}} </a>
+                      </li>
+
+				  </div>
+          {% endfor %}
+
+
+
+
+{% endblock %}
