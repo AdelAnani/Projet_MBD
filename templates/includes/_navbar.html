@@ -6,22 +6,39 @@
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
-      </li>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 navbar-right">
+
       <li class="nav-item">
         <a class="nav-link" href="/Albums">Albums</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/register">Register</a>
+        <a class="nav-link" href="/Artistes">Artistes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tracks">Chansons<span class="sr-only">(current)</span></a>
+      </li>
+
       </li>
     </ul>
+      <ul class="navbar-nav ml-auto" >
+        {% if session.logged_in %}
+           <li class="nav-item">
+           <a class="nav-link" href="/logout">logout</a>
+           </li>
+           <liclass="nav-item">
+             <a class="nav-link" href="/dashboard">Dashboard</a>
+           </li>
+        {% else %}
+         <li class="nav-item">
+         <a class="nav-link" href="/register">Register</a>
+         </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/login">login</a>
+        </li>
+        {% endif %}
+      </ul>
 
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Tapez ici...">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
-    </form>
+
 
   </div>
 </nav>

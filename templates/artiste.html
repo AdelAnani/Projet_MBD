@@ -1,33 +1,28 @@
-
+% extends 'layout.html' %}
 {% block body %}
 
 <h1>{{album.name}}</h1>
 <div class="container">
 
         <div class="card col-md-4" style="width: 18rem;">
-            <img src="{{album.image}}" style="height: 18rem">
+            <img src="{{artiste.image}}" style="height: 18rem">
             <div class="card-body">
-                <h2>{{album.name}}</h2>
-                <h3>{{album.artist}}</h3>
+                <h2>{{artiste.name}}</h2>
             </div>
         </div>
 
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    t
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+<p class="lead">biographie de l'artiste     .</p>
 
 </div>
 
 <div class="container">
     <h1>Chansons</h1>
     <div class="row">
-        {% for album in album.tracks %}
+        {% for album in artiste.albums %}
         <div class="card col-md-4" style="width: 18rem;">
-				  <img src="{{album.image}}" style="height: 18rem">
 				  <div class="card-body">
 	            	<h2>{{album.name}}</h2>
-                    <h3>{{album.duration}}</h3>
+                    <h3>{{album.image}}</h3>
                   </div>
         </div>
 
