@@ -4,6 +4,8 @@ from wtforms import Form, StringField, TextAreaField, PasswordField, validators
 from passlib.hash import sha256_crypt
 from albums_repository import JsonAlbumsRepository
 from albums_service import AlbumsService
+from favorites_repository import FavoritesRepository
+from favorites_service import FavoritesService
 from tracks_repository import  JsonTrackRepository
 from tracks_service import TracksService
 from functools import wraps
@@ -35,6 +37,20 @@ playlist_repository = JsonPlaylistRepository("playlist.json")
 playlist_service = PlaylistService(playlist_repository)
 artistes_repository = JsonArtistesRepository("artistes.json")
 artistes_service = ArtistesService(artistes_repository )
+
+
+class FavoritesService:
+    def __init__(self, favorites_repository: FavoritesRepository):
+        self.favorites_repository = favorites_repository
+
+    def add_track_to_favorites(self, username, track_id):
+        self.favorites_repository.add_track_to_favorites(username, track_id)
+
+
+
+
+favorites_repository = JsonFavoritesRepository()
+favorites_service = FavoritesService()
 
 
 
@@ -191,6 +207,14 @@ def register():
 
         return render_template('not_found.html')
     return render_template('register.html', form=form)
+
+@app.route('/tracks/<int:track_id>', methods=['POST'])
+@is_logged_in
+def add_track_to_favorites(track_id):
+    username = session['username']
+    favorites_service.add_track_to_favorites(username, track_id)
+    return render_template('add_to_favorites_confirmation.html')
+
 
 
 if __name__ == '__main__':
