@@ -1,9 +1,9 @@
 import pymysql
 
 
-readArtistData = open("artistDataQuery", 'r')
-readAlbumData = open("albumDataQuery", 'r')
-readTrackData = open("trackDataQuery", 'r')
+readArtistData = open("dataQuery/artistDataQuery", 'r')
+readAlbumData = open("dataQuery/albumDataQuery", 'r')
+readTrackData = open("dataQuery/trackDataQuery", 'r')
 artistDatas = readArtistData.readlines()
 albumDatas = readAlbumData.readlines()
 trackDatas = readTrackData.readlines()
@@ -11,7 +11,7 @@ readArtistData.close()
 readAlbumData.close()
 readTrackData.close()
 
-createBD = pymysql.connect(host="localhost",user="root",password="Hazard10")
+createBD = pymysql.connect(host="localhost",user="root",password="glo2005")
 cursor = createBD.cursor()
 
 queryCreateBD = 'CREATE DATABASE Musika;'
@@ -35,7 +35,7 @@ cursor.execute(queryCreateTableFeature)
 cursor.close()
 createBD.close()
 
-BD = pymysql.connect(host="localhost", user="root", password="Hazard10", db="Musika")
+BD = pymysql.connect(host="localhost", user="root", password="glo2005", db="Musika")
 cursor2 = BD.cursor()
 
 for artistData in artistDatas:

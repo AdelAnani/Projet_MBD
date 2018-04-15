@@ -1,25 +1,36 @@
-from flask import Flask, render_template, flash, redirect, url_for,session,logging,request
-from wtforms import Form, StringField, TextAreaField, PasswordField, validators
-from passlib.hash import sha256_crypt
-from repository.albums_repository import JsonAlbumsRepository
-from service.albums_service import AlbumsService
-from repository.tracks_repository import  JsonTrackRepository
-from service.tracks_service import TracksService
 from functools import wraps
-from repository.playlist_repository import JsonPlaylistRepository
-from service.playlist_service import PlaylistService
-from repository.artistes_repository import SQLArtistesRepository
-from service.artistes_service import ArtistesService
+
 import pymysql
+from flask import Flask, render_template, flash, redirect, url_for, session
+from wtforms import Form, StringField, PasswordField, validators
+
+from repository.albums_repository import JsonAlbumsRepository, SqlAlbumsRepository
+from repository.artistes_repository import SQLArtistesRepository
+from repository.playlist_repository import JsonPlaylistRepository
+from service.albums_service import AlbumsService
+from service.artistes_service import ArtistesService
+from service.playlist_service import PlaylistService
+from service.tracks_service import TracksService
 
 app = Flask(__name__)
 
-musikaDB =("localhost","root","Hazard10","Musika")
-#userDB =("localhost","root","1234","users")
+DB_config = {
+    'host': 'localhost',
+    'user': 'root',
+    'password': 'glo2005',
+    'db_name': 'Musika'
+}
+
+
+musikaDB = ("localhost", "root", "glo2005", "Musika")
+
+
+# userDB =("localhost","root","1234","users")
 
 def connectionMusika():
-    connect= pymysql.connect(musikaDB[0],musikaDB[1],musikaDB[2],musikaDB[3])
+    connect = pymysql.connect(musikaDB[0], musikaDB[1], musikaDB[2], musikaDB[3])
     return connect
+
 
 def find_all_artists():
     getAllArtistsQuery = "SELECT * FROM artist"
@@ -38,6 +49,7 @@ def find_all_artists():
     connectionMusika().close()
     return allArtistes
 
+
 def find_artist_by_id(id):
     getAllArtistsQuery = "SELECT * FROM artist WHERE artistId = %s"
     connectionMusika()
@@ -54,6 +66,7 @@ def find_artist_by_id(id):
     cursor.close()
     connectionMusika().close()
     return artist
+
 
 def find_all_albums():
     getAllArtistsQuery = "SELECT album.albumId, album.albumName, album.albumPhoto, artist.artistName  FROM album, artist WHERE album.artistId = artist.artistId"
@@ -74,6 +87,7 @@ def find_all_albums():
     connectionMusika().close()
     return allAlbumsList
 
+
 def find_album_by_id(id):
     getAlbumByIdQuery = "SELECT * FROM album WHERE albumId = %s"
     connectionMusika()
@@ -86,39 +100,45 @@ def find_album_by_id(id):
         'name': albumData[1],
         'description': albumData[2],
         'image': albumData[3],
-        'dateRelease':albumData[4]
+        'dateRelease': albumData[4]
     }
     cursor.close()
     connectionMusika().close()
     return album
 
+
 def find_all_tracks():
-    # getAllArtistsQuery = "SELECT * FROM track"
-    # connectionMusika()
-    # cursor = connectionMusika().cursor()
-    # cursor.execute(getAllArtistsQuery)
-    # allArtistes = cursor.fetchall()
-    # allArtistesList = []
-    # print(allArtistes)
-    # for row in allArtistes:
-    #     allArtistesList.append({
-    #         'id': row[0],
-    #         'name': row[1],
-    #         'image': row[3],
-    #     })
-    # cursor.close()
-    # connectionMusika().close()
+    getAllArtistsQuery = "SELECT * FROM track"
+    connectionMusika()
+    cursor = connectionMusika().cursor()
+    cursor.execute(getAllArtistsQuery)
+    allArtistes = cursor.fetchall()
+    allArtistesList = []
+    print(allArtistes)
+    for row in allArtistes:
+        allArtistesList.append({
+            'id': row[0],
+            'name': row[1],
+            'image': row[3],
+        })
+    cursor.close()
+    connectionMusika().close()
     return allArtistesList
 
-album_repository = JsonAlbumsRepository("albums.json")
-albums_service = AlbumsService(album_repository)
-tracks_repository = JsonAlbumsRepository("tracks.json")
-tracks_service = TracksService(tracks_repository)
-playlist_repository = JsonPlaylistRepository("playlist.json")
-playlist_service = PlaylistService(playlist_repository)
-artistes_repository = SQLArtistesRepository()
-artistes_service = ArtistesService(artistes_repository )
 
+#album_repository = JsonAlbumsRepository("albums.json")
+album_repository = SqlAlbumsRepository(DB_config)
+
+
+tracks_repository = JsonAlbumsRepository("tracks.json")
+playlist_repository = JsonPlaylistRepository("playlist.json")
+artistes_repository = SQLArtistesRepository()
+
+
+albums_service = AlbumsService(album_repository)
+tracks_service = TracksService(tracks_repository)
+playlist_service = PlaylistService(playlist_repository)
+artistes_service = ArtistesService(artistes_repository)
 
 
 ########################################
@@ -132,6 +152,7 @@ class RegisterForm(Form):
     ])
     confirm = PasswordField('Confirm Password')
 
+
 def is_logged_in(f):
     @wraps(f)
     def wrap(*args, **kwargs):
@@ -140,7 +161,9 @@ def is_logged_in(f):
         else:
             flash('Unauthorized, Please login', 'danger')
             return redirect(url_for('login'))
+
     return wrap
+
 
 #
 # @app.route('/login', methods=['GET', 'POST'])
@@ -191,8 +214,7 @@ def logout():
 @app.route('/dashboard')
 @is_logged_in
 def dashboard():
-    return render_template('dashboard.html', Playlists= playlist_service.get_all_playlists())
-
+    return render_template('dashboard.html', Playlists=playlist_service.get_all_playlists())
 
 
 @app.route('/')
@@ -201,8 +223,8 @@ def index():
 
 
 @app.route('/Albums')
-def products():
-    return render_template('albums.html', Albums=find_all_albums())
+def albums():
+    return render_template('albums.html', Albums=albums_service.get_all_albums())
 
 
 @app.route('/albums/<int:id>/')
@@ -210,42 +232,42 @@ def albumss(id):
     album_id = id
     try:
         album = find_album_by_id(int(album_id))
-        return render_template('album.html', album = album)
+        return render_template('album.html', album=album)
     except:
         return render_template('not_found.html')
 
-@app.route('/Artistes')
 
-def artistess ():
-    return render_template('artistes.html', Artistes = find_all_artists())
+@app.route('/Artistes')
+def artistess():
+    return render_template('artistes.html', Artistes=find_all_artists())
+
 
 @app.route('/Artistes/<int:id>/')
 def artistesss(id):
     artiste_id = id
     try:
         artist = find_artist_by_id(int(artiste_id))
-        return render_template('artiste.html', artiste = artist )
+        return render_template('artiste.html', artiste=artist)
     except:
         return render_template('not_found.html')
-
 
 
 @app.route('/tracks')
 @is_logged_in
 def chanson():
-    return render_template('tracks.html', tracks= tracks_service.get_all_tracks())
+    return render_template('tracks.html', tracks=tracks_service.get_all_tracks())
 
 
 class RegisterForm(Form):
-
-    name = StringField ('Name',[validators.length(min=1, max=50)])
+    name = StringField('Name', [validators.length(min=1, max=50)])
     username = StringField('Username', [validators.length(min=4, max=25)])
     email = StringField('Email', [validators.length(min=6, max=50)])
     password = PasswordField('Password', [
         validators.DataRequired(),
-        validators.EqualTo('confirm', message= 'Passwords do not match')
+        validators.EqualTo('confirm', message='Passwords do not match')
     ])
     confirm = PasswordField('confirm Password')
+
 
 #
 # @app.route('/register', methods=['GET','POST'])
@@ -279,4 +301,3 @@ class RegisterForm(Form):
 if __name__ == '__main__':
     app.secret_key = 'secret123'
     app.run(debug=True)
-

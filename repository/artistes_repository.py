@@ -15,7 +15,7 @@ class SQLArtistesRepository(ArtistesRepository):
     getArtistById = "SELECT * FROM artist WHERE albumId = 1"
 
     def __init__(self):
-        self.connection = pymysql.connect(host="localhost", user="root", password="Hazard10", db="Musika")
+        self.connection = pymysql.connect(host="localhost", user="root", password="glo2005", db="Musika")
 
     def find_all_artistes(self):
         getAllArtistsQuery = "SELECT * FROM artist"
