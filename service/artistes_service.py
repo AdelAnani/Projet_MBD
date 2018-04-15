@@ -1,4 +1,4 @@
-from albums_repository import AlbumsRepository
+from repository.albums_repository import AlbumsRepository
 
 
 class ArtistesService:

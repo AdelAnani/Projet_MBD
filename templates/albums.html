@@ -16,8 +16,9 @@
 				<div class="card col-md-4" style="width: 18rem;">
 				  <img src="{{album.image}}" style="height: 18rem">
 				  <div class="card-body">
-	            	<h3>{{album.artist}}</h3>
-	            	<p><a class="btn btn-secondary" href="albums/{{album.id}}" role="button">Voir l'album</a></p>
+					  <h3>{{album.name}}</h3>
+					  <h3>{{album.artist}}</h3>
+					  <p><a class="btn btn-secondary" href="albums/{{album.id}}" role="button">Voir l'album</a></p>
 				  </div>
 				</div>
 			{% endfor %}

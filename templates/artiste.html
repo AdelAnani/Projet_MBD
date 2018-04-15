@@ -1,21 +1,24 @@
-% extends 'layout.html' %}
+{% extends 'layout.html' %}
 {% block body %}
 
-<h1>{{album.name}}</h1>
+<br>
 <div class="container">
-
-        <div class="card col-md-4" style="width: 18rem;">
+    <h2 style="text-align: center">{{artiste.name}}</h2>
+    <br>
+    <div class="row">
+        <div class="card col-md-4">
             <img src="{{artiste.image}}" style="height: 18rem">
-            <div class="card-body">
-                <h2>{{artiste.name}}</h2>
-            </div>
         </div>
-
-<p class="lead">biographie de l'artiste     .</p>
-
+        <div class="col-md-6">
+            <p class="lead">{{artiste.description}}</p>
+        </div>
+    </div>
 </div>
-
+<br>
 <div class="container">
+    <h2 style="text-align: center">Liste des albums de {{artiste.name}}</h2>
+</div>
+<!--<div class="container">
     <h1>Chansons</h1>
     <div class="row">
         {% for album in artiste.albums %}
@@ -28,5 +31,5 @@
 
     </div>
         {% endfor %}
-</div>
+</div>-->
 {% endblock %}

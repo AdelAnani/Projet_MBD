@@ -1,37 +1,22 @@
-
+{% extends 'layout.html' %}
 {% block body %}
 
-<h1>{{album.name}}</h1>
+<br>
 <div class="container">
-
-        <div class="card col-md-4" style="width: 18rem;">
-            <img src="{{album.image}}" style="height: 18rem">
-            <div class="card-body">
-                <h2>{{album.name}}</h2>
-                <h3>{{album.artist}}</h3>
-            </div>
-        </div>
-
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    t
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-
-</div>
-
-<div class="container">
-    <h1>Chansons</h1>
+    <h2 style="text-align: center">{{album.name}}</h2>
+    <br>
     <div class="row">
-        {% for album in album.tracks %}
-        <div class="card col-md-4" style="width: 18rem;">
-				  <img src="{{album.image}}" style="height: 18rem">
-				  <div class="card-body">
-	            	<h2>{{album.name}}</h2>
-                    <h3>{{album.duration}}</h3>
-                  </div>
+        <div class="card col-md-4">
+            <img src="{{album.image}}" style="height: 18rem">
         </div>
-
+        <div class="col-md-6">
+            <p class="lead">{{album.description}}</p>
+        </div>
     </div>
-        {% endfor %}
 </div>
+<br>
+<div class="container">
+    <h2 style="text-align: center">Liste des chanson de l'abum {{album.name}}</h2>
+</div>
+
 {% endblock %}
