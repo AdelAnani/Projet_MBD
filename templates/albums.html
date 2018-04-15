@@ -1,27 +1,46 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-        <br>
-		<h1>Albums</h1>
-		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<br>
+<h1 style="display: inline-block">Albums</h1>
+<div class="row" style="display: inline-block; min-width: 80%;">
+    <div class="col-lg-6">
+        <div class="input-group">
+            <input  type="text" class="form-control" placeholder="Search for..." onkeydown="goToSearch(this)"  value="">
+        </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
 
-		<div class="container">
-			<div class="row">
-			{% for album in Albums %}
-				<div class="card col-md-4" style="width: 18rem;">
-				  <img src="{{album.image}}" style="height: 18rem">
-				  <div class="card-body">
-					  <h3>{{album.name}}</h3>
-					  <h3>{{album.artist}}</h3>
-					  <p><a class="btn btn-secondary" href="albums/{{album.id}}" role="button">Voir l'album</a></p>
-				  </div>
-				</div>
-			{% endfor %}
-			</div>
-		</div>
+</div>
+<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<div class="container">
+    <div class="row">
+        {% for album in Albums %}
+        <div class="card col-md-4" style="width: 18rem;">
+            <img src="{{album.image}}" style="height: 18rem">
+            <div class="card-body">
+                <h3>{{album.name}}</h3>
+                <h5>{{album.artist}}</h5>
+                <p><a class="btn btn-secondary" href="albums/{{album.id}}" role="button">Voir l'album</a></p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+function goToSearch(el) {
+
+    if(event.key === 'Enter') {
+        var searchTerm = el.value;
+        window.location = "albums/search?term=" + searchTerm;
+    }
+
+}
+</script>
 {% endblock %}
