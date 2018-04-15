@@ -16,7 +16,17 @@
 </div>
 <br>
 <div class="container">
-    <h2 style="text-align: center">Liste des chanson de l'abum {{album.name}}</h2>
+    <h2 style="text-align: center">Liste des chanson de l'album {{album.name}}</h2>
+    <div class="row">
+        {% for track in album.tracks %}
+        <div class="card col-md-4" style="width: 18rem;">
+            <div class="card-body">
+                <h3>{{track.tackName}}</h3>
+                <h3>{{track.trackDuration}}</h3>
+                <p><a class="btn btn-secondary" href="albums/{{album.id}}" role="button">Voir l'album</a></p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
-
-{% endblock %}
+    {% endblock %}

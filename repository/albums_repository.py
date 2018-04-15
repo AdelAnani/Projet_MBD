@@ -10,23 +10,6 @@ class AlbumsRepository:
     def find_album_by_id(self, album_id):
         raise NotImplemented("must be implemented")
 
-
-class JsonAlbumsRepository(AlbumsRepository):
-    def __init__(self, path):
-        self.path = path
-
-    def find_all_albums(self):
-        return load_json(self.path)
-
-    def find_album_by_id(self, album_id):
-        albums = load_json(self.path)
-        album_to_return = None
-        for album in albums:
-            if album['id'] == album_id:
-                album_to_return = album
-        return album_to_return
-
-
 class SqlAlbumsRepository(AlbumsRepository):
     def __init__(self, config_dict):
         self.host = config_dict['host']
@@ -57,19 +40,52 @@ class SqlAlbumsRepository(AlbumsRepository):
         return all_albums_list
 
     def find_album_by_id(self, album_id):
-        getAlbumByIdQuery = "SELECT * FROM album WHERE albumId = %s"
+
+        getAlbumByIdQuery = "SELECT * FROM album, track WHERE album.albumId = %s and track.albumId = album.albumId"
         connection = self._get_db_connection()
         cursor = connection.cursor()
-        cursor.execute(getAlbumByIdQuery, id)
-        albumData = cursor.fetchone()
-        print(albumData)
+        cursor.execute(getAlbumByIdQuery, album_id)
+        albumData_list = cursor.fetchall()
+
         album = {
-            'id': albumData[0],
-            'name': albumData[1],
-            'description': albumData[2],
-            'image': albumData[3],
-            'dateRelease': albumData[4]
+            'id': albumData_list[0][0],
+            'name': albumData_list[0][1],
+            'description': albumData_list[0][2],
+            'image': albumData_list[0][3],
+            'dateRelease': albumData_list[0][4],
+            'tracks': []
         }
+
+        for track in   albumData_list:
+            album['tracks'].append({
+                'trackId': track[6],
+                'trackName': track[7],
+                'trackDuration': track[8]
+            })
+
         cursor.close()
         connection.close()
         return album
+    def find_album_by_name (self, album_name):
+
+        getAlbumByIdQuery = "SELECT * FROM album WHERE albumName = %s"
+        connection = self._get_db_connection()
+        cursor = connection.cursor()
+        cursor.execute(getAlbumByIdQuery, album_name)
+        albumData_list = cursor.fetchall()
+        if albumData_list > 0 :
+            album = {
+                'id': albumData_list[0],
+                'name': albumData_list[1],
+                'description': albumData_list[2],
+                'image': albumData_list[3],
+                'tracks': []
+            }
+            cursor.close()
+            connection.close()
+
+        else :
+            album = None
+        return album
+
+
