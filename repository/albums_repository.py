@@ -39,12 +39,15 @@ class SqlAlbumsRepository(AlbumsRepository):
         connection.close()
         return all_albums_list
 
+
     def find_album_by_id(self, album_id):
+
 
         getAlbumByIdQuery = "SELECT * FROM album, track WHERE album.albumId = %s and track.albumId = album.albumId"
         connection = self._get_db_connection()
         cursor = connection.cursor()
         cursor.execute(getAlbumByIdQuery, album_id)
+
         albumData_list = cursor.fetchall()
 
         album = {
@@ -68,23 +71,31 @@ class SqlAlbumsRepository(AlbumsRepository):
         return album
     def find_album_by_name (self, album_name):
 
-        getAlbumByIdQuery = "SELECT * FROM album WHERE albumName = %s"
+        get_album_by_name_query = "SELECT * FROM album, track WHERE album.albumName = %s and track.albumId = album.albumId"
         connection = self._get_db_connection()
         cursor = connection.cursor()
-        cursor.execute(getAlbumByIdQuery, album_name)
-        albumData_list = cursor.fetchall()
-        if albumData_list > 0 :
+        cursor.execute(get_album_by_name_query, album_name)
+        album_data_list = cursor.fetchall()
+
+        if len(album_data_list) > 0:
             album = {
-                'id': albumData_list[0],
-                'name': albumData_list[1],
-                'description': albumData_list[2],
-                'image': albumData_list[3],
+                'id': album_data_list[0][0],
+                'name': album_data_list[0][1],
+                'description': album_data_list[0][2],
+                'image': album_data_list[0][3],
+                'dateRelease': album_data_list[0][4],
                 'tracks': []
             }
+
+            for track in album_data_list:
+                album['tracks'].append({
+                    'trackId': track[6],
+                    'trackName': track[7],
+                    'trackDuration': track[8]
+                })
             cursor.close()
             connection.close()
-
-        else :
+        else:
             album = None
         return album
 

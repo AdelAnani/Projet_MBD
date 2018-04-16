@@ -68,6 +68,40 @@ class SQLArtistesRepository(ArtistesRepository):
         connection.close()
         return artist
 
+    def find_artiste_by_name(self, artiste_name):
+        get_artists_by_name_query = "SELECT * FROM artist, album WHERE artist.artistName = %s and artist.artistId = album.artistId "
+        connection = self._get_db_connection()
+        cursor = connection.cursor()
+        cursor.execute(get_artists_by_name_query, artiste_name)
+        artist_data_list = cursor.fetchall()
+        if len(artist_data_list)> 0:
+            artist = {
+                'id': artist_data_list[0][0],
+                'name': artist_data_list[0][1],
+                'description': artist_data_list[0][2],
+                'image': artist_data_list[0][3],
+                'albums': []
+            }
+
+            for row in artist_data_list:
+                artist['albums'].append({
+                    'id': row[4],
+                    'name': row[5],
+                    'description': row[6],
+                    'image': row[7],
+                    'date_release': row[8],
+
+                })
+            connection.close()
+        else :
+            artist = None
+        return artist
+
+
+
+
+
+
 
 
 # def getCartProduct(idUser):

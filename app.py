@@ -134,20 +134,17 @@ def albumss(id):
         album = albums_service.find_album_by_id(int(album_id))
         return render_template('album.html', album=album)
     except Exception as e:
-        print(e)
         return render_template('not_found.html')
 
 
 @app.route('/albums/search')
-def search_by_term():
+def search_album_by_term():
     name_album = request.args.get('term')
+    print(str(name_album))
     try:
-        return render_template('albums.html', Albums=albums_service.find_album_by_name(str(name_album)))
+        return render_template('album.html', album=albums_service.find_album_by_name(str(name_album)))
     except Exception as e:
-        print(e)
         return render_template('not_found.html')
-
-
 
 
 
@@ -160,18 +157,38 @@ def artistess():
 def artistesss(id):
     artiste_id = id
     try:
-        print(5)
-        artist = artistes_service.find_artiste_by_id(int(artiste_id))
-        print(artist)
-        return render_template('artiste.html', artist= artist)
-    except Exception as e:
-        print(e)
+
+             return render_template('artiste.html', artist= artistes_service.find_artiste_by_id(int(artiste_id)))
+    except:
+
         return render_template('not_found.html')
 
+@app.route('/Artistes/search')
+def search_artist_by_term():
+    name_artist = request.args.get('term')
 
+    try:
+        return render_template('artiste.html', artist= artistes_service.find_artiste_by_name(name_artist))
+    except :
+
+        return render_template('not_found.html')
 @app.route('/tracks')
 def chanson():
     return render_template('tracks.html', tracks= tracks_service.get_all_tracks())
+@app.route('/tracks/<int:id>/')
+def search_trsck_by_id(id):
+    tack_id = id
+    return render_template('track.html', track= tracks_service.get_track_by_id(tack_id))
+
+@app.route('/tracks/search')
+def search_track_by_term():
+    track_name = request.args.get('term')
+
+    try:
+        return render_template('track.html', track=tracks_service.get_track_by_name(track_name))
+    except:
+
+        return render_template('not_found.html')
 
 
 class RegisterForm(Form):

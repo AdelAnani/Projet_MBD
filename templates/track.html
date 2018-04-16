@@ -1,27 +1,20 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-<br>
-<h1>track</h1>
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+        <p class="lead">bon écoute...</p>
 <div class="container">
-    <div class="row">
-        {% for album in album.tracks %}
-        <div class="card col-md-4" style="width: 18rem;">
-            <img src="{{album.image}}" style="height: 18rem">
-            <div class="card-body">
-                <h2>{{album.name}}</h2>
-                <h3>{{album.duration}}</h3>
-                <p><a class="btn btn-secondary" href="albums/{{album.id}}" role="button">Voir la chanson </a></p>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</div>
+			<div class="row">
+			{% for track in track %}
+
+				<div class="card col-md-4" style="width: 18rem;">
+					<div class="card-body">
+						<h2> Name :    {{track.name}}</h2>
+	            		<h4> Duration:   {{track.duration}}</h4>
+                        <h5>Album :     {{track.album_name}}</h5>
+
+				  </div>
+				</div>
+			{% endfor %}
+			</div>
+		</div>
 {% endblock %}
