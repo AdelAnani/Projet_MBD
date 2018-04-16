@@ -2,239 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c42d78ee-9cec-4a99-a7c2-1274f725919a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ScriptBDUser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataQuery/albumDataQuery.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataQuery/artistDataQuery.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataQuery/trackDataQuery.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/_data/wordsets/bip39.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/_data/wordsets/eff_long.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/_data/wordsets/eff_prefixed.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/_data/wordsets/eff_short.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/_setup/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/_setup/stamp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/apache.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/context.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/crypto/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/crypto/_blowfish/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/crypto/_blowfish/_gen_files.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/crypto/_blowfish/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/crypto/_blowfish/unrolled.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/crypto/_md4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/crypto/des.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/crypto/digest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/crypto/scrypt/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/crypto/scrypt/_builtin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/crypto/scrypt/_gen_files.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/crypto/scrypt/_salsa.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/exc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/ext/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/ext/django/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/ext/django/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/ext/django/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/argon2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/bcrypt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/cisco.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/des_crypt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/digests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/django.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/fshp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/ldap_digests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/md5_crypt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/misc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/mssql.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/mysql.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/oracle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/pbkdf2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/phpass.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/postgres.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/roundup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/scram.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/scrypt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/sha1_crypt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/sha2_crypt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/sun_md5_crypt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/handlers/windows.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/hash.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/hosts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/ifc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/pwd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/registry.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/__main__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/_test_bad_register.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/backports.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/sample1.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/sample1b.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/sample1c.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/sample_config_1s.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_apache.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_context.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_context_deprecated.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_crypto_builtin_md4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_crypto_des.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_crypto_digest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_crypto_scrypt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_ext_django.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_ext_django_source.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_handlers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_handlers_argon2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_handlers_bcrypt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_handlers_cisco.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_handlers_django.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_handlers_pbkdf2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_handlers_scrypt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_hosts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_pwd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_registry.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_totp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_utils_handlers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_utils_md4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_utils_pbkdf2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/test_win32.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/tox_support.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/tests/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/totp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/utils/binary.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/utils/compat/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/utils/compat/_ordered_dict.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/utils/decor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/utils/des.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/utils/handlers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/utils/md4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/utils/pbkdf2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passlib/win32.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/_compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/_socketio.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/charset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/connections.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/constants/CLIENT.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/constants/COMMAND.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/constants/CR.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/constants/ER.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/constants/FIELD_TYPE.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/constants/FLAG.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/constants/SERVER_STATUS.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/constants/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/converters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/cursors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/err.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/optionfile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/data/load_local_data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/data/load_local_warn_data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/test_DictCursor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/test_SSCursor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/test_basic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/test_connection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/test_converters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/test_cursor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/test_err.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/test_issues.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/test_load_local.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/test_nextset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/test_optionfile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/thirdparty/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/thirdparty/test_MySQLdb/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/thirdparty/test_MySQLdb/capabilities.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/thirdparty/test_MySQLdb/dbapi20.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/thirdparty/test_MySQLdb/test_MySQLdb_capabilities.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/thirdparty/test_MySQLdb/test_MySQLdb_dbapi20.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/tests/thirdparty/test_MySQLdb/test_MySQLdb_nonstandard.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/times.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymysql/util.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/users_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/users_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/csrf/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/csrf/core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/csrf/session.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/fields/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/fields/core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/fields/html5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/fields/simple.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/form.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/i18n.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/ar/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/ar/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/bg/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/bg/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/ca/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/ca/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/cs_CZ/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/cs_CZ/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/cy/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/cy/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/de/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/de/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/de_CH/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/de_CH/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/el/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/el/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/en/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/en/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/es/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/es/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/et/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/et/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/fa/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/fa/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/fi/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/fr/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/fr/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/he/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/hu/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/hu/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/it/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/it/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/ja/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/ja/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/ko/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/ko/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/nb/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/nb/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/nl/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/nl/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/pl/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/pl/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/pt/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/pt/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/ru/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/ru/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/sk/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/sk/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/sv/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/sv/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/tr/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/tr/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/uk/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/uk/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/wtforms.pot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/zh/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/zh/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/zh_TW/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/locale/zh_TW/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/meta.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/validators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/widgets/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/widgets/core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wtforms/widgets/html5.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScriptBD.py" beforeDir="false" afterPath="$PROJECT_DIR$/ScriptBD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScriptBDUser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ScriptBDUser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/artiste.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artiste.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/playlist_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/favorite_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/playlist_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/favorite_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/albums.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/albums.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/includes/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/_navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tracks.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tracks.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -249,7 +27,8 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Projet_MBD$app.coverage" NAME="app Coverage Results" MODIFIED="1523762354874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project$app.coverage" NAME="app Coverage Results" MODIFIED="1523520579663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Projet_MBD$ScriptBD.coverage" NAME="ScriptBD Coverage Results" MODIFIED="1523762303802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Projet_MBD$ScriptBD.coverage" NAME="ScriptBD Coverage Results" MODIFIED="1523875702456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Projet_MBD$ScriptBDUser.coverage" NAME="ScriptBDUser Coverage Results" MODIFIED="1523875714047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -273,29 +52,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tracks_repository.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/repository/tracks_repository.py">
+      <file leaf-file-name="albums.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/albums.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="75" selection-end-line="83" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users_repository.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/repository/users_repository.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users_service.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/users_service.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+            <state relative-caret-position="326">
+              <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -303,8 +64,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="831">
-              <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+            <state relative-caret-position="853">
+              <caret line="275" lean-forward="true" selection-start-line="275" selection-end-line="275" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -312,11 +73,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="albums_service.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/albums_service.py">
+      <file leaf-file-name="tracks.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/tracks.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+            <state relative-caret-position="238">
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="27" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_navbar.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/includes/_navbar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -324,41 +103,47 @@
       <file leaf-file-name="artistes_repository.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/repository/artistes_repository.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScriptBD.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ScriptBD.py">
+      <file leaf-file-name="tracks_repository.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/repository/tracks_repository.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="743">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="250">
+              <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScriptBDUser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ScriptBDUser.py">
+      <file leaf-file-name="favorite_repository.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/repository/favorite_repository.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="29" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="albums_repository.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/repository/albums_repository.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="527">
+              <caret line="31" column="25" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="25" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favorite_service.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/favorite_service.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tracks_service.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/tracks_service.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="45" lean-forward="true" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -387,21 +172,19 @@
       <find>find_artist_by_id</find>
       <find>artistesss</find>
       <find>pri</find>
-      <find>playlist</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="refactor/db" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/navigation.html" />
         <option value="$PROJECT_DIR$/templates/layout.html" />
         <option value="$PROJECT_DIR$/templates/includes/album.html" />
         <option value="$PROJECT_DIR$/models/album.html" />
@@ -420,38 +203,39 @@
         <option value="$PROJECT_DIR$/tracks_service.py" />
         <option value="$PROJECT_DIR$/tracks.json" />
         <option value="$PROJECT_DIR$/templates/home.html" />
-        <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/playlist_repository.py" />
         <option value="$PROJECT_DIR$/playlist_service.py" />
         <option value="$PROJECT_DIR$/playlist.json" />
-        <option value="$PROJECT_DIR$/templates/dashboard.html" />
-        <option value="$PROJECT_DIR$/templates/includes/_navbar.html" />
         <option value="$PROJECT_DIR$/artistes_service.py" />
         <option value="$PROJECT_DIR$/templates/artists.html" />
         <option value="$PROJECT_DIR$/artistes.json" />
         <option value="$PROJECT_DIR$/artistes_repository.py" />
         <option value="$PROJECT_DIR$/util/MySQLDBInteractor.py" />
+        <option value="$PROJECT_DIR$/ScriptBD.py" />
         <option value="$PROJECT_DIR$/templates/artiste.html" />
         <option value="$PROJECT_DIR$/service/album_reseach_service.py" />
-        <option value="$PROJECT_DIR$/templates/albums.html" />
         <option value="$PROJECT_DIR$/repository/album_reseach_repository.py" />
         <option value="$PROJECT_DIR$/service/albums_service.py" />
         <option value="$PROJECT_DIR$/templates/artistes.html" />
         <option value="$PROJECT_DIR$/service/artistes_service.py" />
         <option value="$PROJECT_DIR$/repository/artistes_repository.py" />
-        <option value="$PROJECT_DIR$/templates/tracks.html" />
         <option value="$PROJECT_DIR$/service/tracks_service.py" />
         <option value="$PROJECT_DIR$/repository/tracks_repository.py" />
         <option value="$PROJECT_DIR$/repository/albums_repository.py" />
         <option value="$PROJECT_DIR$/templates/album.html" />
         <option value="$PROJECT_DIR$/templates/track.html" />
         <option value="$PROJECT_DIR$/templates/not_found.html" />
-        <option value="$PROJECT_DIR$/ScriptBD.py" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/ScriptBDUser.py" />
         <option value="$PROJECT_DIR$/templates/register.html" />
-        <option value="$PROJECT_DIR$/repository/users_repository.py" />
-        <option value="$PROJECT_DIR$/service/users_service.py" />
+        <option value="$PROJECT_DIR$/templates/albums.html" />
+        <option value="$PROJECT_DIR$/repository/playlist_repository.py" />
+        <option value="$PROJECT_DIR$/templates/tracks.html" />
+        <option value="$PROJECT_DIR$/repository/favorite_repository.py" />
+        <option value="$PROJECT_DIR$/service/favorite_service.py" />
+        <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/includes/_navbar.html" />
       </list>
     </option>
   </component>
@@ -464,9 +248,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1533" />
+    <option name="y" value="75" />
+    <option name="width" value="1366" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -476,7 +262,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -484,10 +269,37 @@
               <item name="Projet_MBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet_MBD" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Projet_MBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet_MBD" type="462c0819:PsiDirectoryNode" />
+              <item name="dataQuery" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projet_MBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet_MBD" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projet_MBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet_MBD" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projet_MBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet_MBD" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projet_MBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet_MBD" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -502,6 +314,11 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="C:\Users\lekka\Desktop\Projet MBD\Project\templates" />
+      <recent name="C:\Users\lekka\Desktop\Projet MBD\Project" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\lekka\PycharmProjects\Projet_MBD" />
       <recent name="$PROJECT_DIR$/dataQuery" />
@@ -509,13 +326,396 @@
       <recent name="$PROJECT_DIR$/repository" />
       <recent name="$PROJECT_DIR$" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/service" />
-      <recent name="$PROJECT_DIR$/repository" />
-      <recent name="$PROJECT_DIR$/dataQuery" />
-      <recent name="C:\Users\lekka\Desktop\Projet MBD\Project\templates" />
-    </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/ScriptBD.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/repository/__pycache__/albums_repository.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/repository/__pycache__/artistes_repository.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/repository/__pycache__/tracks_repository.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/service/__pycache__/albums_service.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/service/__pycache__/artistes_service.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/service/__pycache__/tracks_service.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/artiste.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/includes/_navbar.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/register.html</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/ScriptBDUser.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/dataQuery/albumDataQuery.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/dataQuery/artistDataQuery.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/dataQuery/trackDataQuery.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/__pycache__/__init__.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/__pycache__/exc.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/__pycache__/hash.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/__pycache__/ifc.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/__pycache__/registry.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/_data/wordsets/bip39.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/_data/wordsets/eff_long.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/_data/wordsets/eff_prefixed.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/_data/wordsets/eff_short.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/_setup/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/_setup/stamp.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/apache.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/apps.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/context.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/crypto/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/crypto/_blowfish/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/crypto/_blowfish/_gen_files.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/crypto/_blowfish/base.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/crypto/_blowfish/unrolled.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/crypto/_md4.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/crypto/des.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/crypto/digest.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/crypto/scrypt/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/crypto/scrypt/_builtin.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/crypto/scrypt/_gen_files.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/crypto/scrypt/_salsa.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/exc.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/ext/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/ext/django/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/ext/django/models.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/ext/django/utils.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/__pycache__/__init__.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/__pycache__/sha2_crypt.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/argon2.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/bcrypt.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/cisco.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/des_crypt.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/digests.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/django.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/fshp.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/ldap_digests.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/md5_crypt.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/misc.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/mssql.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/mysql.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/oracle.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/pbkdf2.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/phpass.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/postgres.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/roundup.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/scram.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/scrypt.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/sha1_crypt.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/sha2_crypt.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/sun_md5_crypt.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/handlers/windows.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/hash.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/hosts.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/ifc.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/pwd.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/registry.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/__main__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/_test_bad_register.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/backports.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/sample1.cfg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/sample1b.cfg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/sample1c.cfg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/sample_config_1s.cfg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_apache.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_apps.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_context.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_context_deprecated.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_crypto_builtin_md4.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_crypto_des.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_crypto_digest.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_crypto_scrypt.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_ext_django.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_ext_django_source.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_handlers.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_handlers_argon2.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_handlers_bcrypt.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_handlers_cisco.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_handlers_django.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_handlers_pbkdf2.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_handlers_scrypt.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_hosts.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_pwd.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_registry.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_totp.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_utils.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_utils_handlers.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_utils_md4.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_utils_pbkdf2.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/test_win32.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/tox_support.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/tests/utils.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/totp.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/utils/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/utils/__pycache__/__init__.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/utils/__pycache__/binary.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/utils/__pycache__/decor.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/utils/__pycache__/handlers.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/utils/binary.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/utils/compat/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/utils/compat/__pycache__/__init__.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/utils/compat/_ordered_dict.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/utils/decor.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/utils/des.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/utils/handlers.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/utils/md4.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/utils/pbkdf2.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/passlib/win32.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/__pycache__/__init__.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/__pycache__/_compat.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/__pycache__/charset.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/__pycache__/connections.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/__pycache__/converters.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/__pycache__/cursors.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/__pycache__/err.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/__pycache__/optionfile.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/__pycache__/times.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/__pycache__/util.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/_compat.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/_socketio.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/charset.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/connections.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/constants/CLIENT.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/constants/COMMAND.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/constants/CR.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/constants/ER.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/constants/FIELD_TYPE.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/constants/FLAG.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/constants/SERVER_STATUS.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/constants/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/constants/__pycache__/CLIENT.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/constants/__pycache__/COMMAND.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/constants/__pycache__/CR.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/constants/__pycache__/ER.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/constants/__pycache__/FIELD_TYPE.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/constants/__pycache__/FLAG.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/constants/__pycache__/SERVER_STATUS.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/constants/__pycache__/__init__.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/converters.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/cursors.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/err.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/optionfile.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/base.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/data/load_local_data.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/data/load_local_warn_data.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/test_DictCursor.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/test_SSCursor.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/test_basic.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/test_connection.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/test_converters.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/test_cursor.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/test_err.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/test_issues.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/test_load_local.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/test_nextset.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/test_optionfile.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/thirdparty/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/thirdparty/test_MySQLdb/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/thirdparty/test_MySQLdb/capabilities.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/thirdparty/test_MySQLdb/dbapi20.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/thirdparty/test_MySQLdb/test_MySQLdb_capabilities.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/thirdparty/test_MySQLdb/test_MySQLdb_dbapi20.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/tests/thirdparty/test_MySQLdb/test_MySQLdb_nonstandard.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/times.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/pymysql/util.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/repository/users_repository.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/service/users_service.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/__pycache__/__init__.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/__pycache__/compat.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/__pycache__/form.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/__pycache__/i18n.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/__pycache__/meta.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/__pycache__/utils.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/__pycache__/validators.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/compat.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/csrf/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/csrf/core.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/csrf/session.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/fields/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/fields/__pycache__/__init__.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/fields/__pycache__/core.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/fields/__pycache__/simple.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/fields/core.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/fields/html5.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/fields/simple.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/form.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/i18n.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/README.md</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/ar/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/ar/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/bg/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/bg/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/ca/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/ca/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/cs_CZ/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/cs_CZ/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/cy/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/cy/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/de/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/de/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/de_CH/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/de_CH/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/el/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/el/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/en/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/en/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/es/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/es/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/et/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/et/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/fa/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/fa/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/fi/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/fr/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/fr/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/he/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/hu/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/hu/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/it/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/it/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/ja/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/ja/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/ko/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/ko/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/nb/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/nb/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/nl/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/nl/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/pl/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/pl/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/pt/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/pt/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/ru/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/ru/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/sk/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/sk/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/sv/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/sv/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/tr/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/tr/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/uk/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/uk/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/wtforms.pot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/zh/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/zh/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/zh_TW/LC_MESSAGES/wtforms.mo</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/locale/zh_TW/LC_MESSAGES/wtforms.po</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/meta.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/utils.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/validators.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/widgets/__init__.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/widgets/__pycache__/__init__.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/widgets/__pycache__/core.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/widgets/core.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wtforms/widgets/html5.py</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -529,7 +729,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.app">
+  <component name="RunManager" selected="Python.ScriptBDUser">
     <configuration name="ScriptBD" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Projet" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -544,6 +744,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ScriptBD.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="ScriptBDUser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Projet" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ScriptBDUser.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -705,11 +924,14 @@
     <list>
       <item itemvalue="Python.app" />
       <item itemvalue="Python.ScriptBD" />
+      <item itemvalue="Python.ScriptBDUser" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.app" />
+        <item itemvalue="Python.ScriptBDUser" />
         <item itemvalue="Python.ScriptBD" />
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python.app" />
       </list>
     </recent_temporary>
   </component>
@@ -791,7 +1013,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523838835073</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="une petite interface pour simuler une chanson">
+      <created>1523854784332</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1523854784332</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -807,53 +1036,54 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="1358" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="11" sideWeight="0.4989339" weight="0.32755297" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.30711043" side_tool="true" weight="0.22772278" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49167928" weight="0.33877996" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.66717094" weight="0.5181518" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.4969743" weight="0.330033" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.6928896" visible="true" weight="0.40551725" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15266559" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49167928" weight="0.3381503" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.6928896" visible="true" weight="0.23025048" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15138593" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="2" />
       <window_info anchor="right" id="SciView" order="0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.2494043" />
-      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49946696" weight="0.39980733" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49946696" weight="0.39980733" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32897604" />
-      <window_info anchor="bottom" id="Find" order="3" sideWeight="0.4977307" weight="0.32178217" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="3" sideWeight="0.4977307" weight="0.32178217" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Find" order="3" sideWeight="0.4977307" weight="0.32178217" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15138593" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18710022" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.66717094" weight="0.5181518" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.2494043" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="11" weight="0.32851636" />
-      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.32851636" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32851636" />
-      <window_info anchor="bottom" id="Find" order="3" />
-      <window_info anchor="right" id="Database" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.29672447" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="TODO" order="11" sideWeight="0.4989339" weight="0.32755297" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32851636" />
-      <window_info anchor="right" id="SciView" order="0" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49167928" weight="0.3381503" />
+      <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32897604" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.4969743" weight="0.330033" />
+      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49946696" weight="0.39980733" />
+      <window_info anchor="right" id="Database" order="2" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.6928896" visible="true" weight="0.23025048" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.30711043" side_tool="true" weight="0.22772278" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -916,7 +1146,8 @@
     <MESSAGE value="added: all albums" />
     <MESSAGE value="tous les routes sont fonctional" />
     <MESSAGE value="tous le recherche sont implimanté est fonctional a 100 %" />
-    <option name="LAST_COMMIT_MESSAGE" value="tous le recherche sont implimanté est fonctional a 100 %" />
+    <MESSAGE value="une petite interface pour simuler une chanson" />
+    <option name="LAST_COMMIT_MESSAGE" value="une petite interface pour simuler une chanson" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -924,26 +1155,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/repository/albums_repository.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/includes/chansons.html" />
     <entry file="file://$PROJECT_DIR$/templates/includes/_formhelpers.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -979,45 +1191,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/playlist_service.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playlist.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="123" selection-start-line="8" selection-start-column="123" selection-end-line="8" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/includes/_navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1036,8 +1213,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pymysql/err.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/wtforms/validators.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pymysql/err.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/wtforms/validators.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1052,31 +1237,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repository/playlist_repository.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataQuery/trackDataQuery">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="79" selection-start-line="11" selection-start-column="72" selection-end-line="11" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataQuery/albumDataQuery">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="129" selection-start-line="16" selection-start-column="129" selection-end-line="16" selection-end-column="129" />
         </state>
       </provider>
     </entry>
@@ -1087,54 +1251,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pymysql/cursors.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/flask/globals.py" />
-    <entry file="file://$PROJECT_DIR$/templates/artiste.html">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pymysql/cursors.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#h2#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="329">
+          <caret line="148" column="43" lean-forward="true" selection-start-line="148" selection-start-column="43" selection-end-line="148" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/flask/globals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/repository/album_reseach_repository.py" />
     <entry file="file://$PROJECT_DIR$/service/album_reseach_service.py" />
-    <entry file="file://$PROJECT_DIR$/service/artistes_service.py">
+    <entry file="file://$PROJECT_DIR$/templates/track.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="306">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/not_found.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/werkzeug/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="343" column="21" selection-start-line="343" selection-start-column="13" selection-end-line="343" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/flask/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="392" column="37" selection-start-line="392" selection-start-column="37" selection-end-line="392" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/artistes.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="38" column="62" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="62" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/tracks_service.py">
+    <entry file="file://$PROJECT_DIR$/templates/artiste.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/artistes_service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/albums_service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/album.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+        <state relative-caret-position="527">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1143,65 +1342,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tracks.html">
+    <entry file="file://$PROJECT_DIR$/dataQuery/artistDataQuery">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="204">
+          <caret line="12" column="82" selection-start-line="12" selection-start-column="82" selection-end-line="12" selection-end-column="82" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/track.html">
+    <entry file="file://$PROJECT_DIR$/dataQuery/trackDataQuery">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="129" selection-start-line="14" selection-start-column="129" selection-end-line="14" selection-end-column="129" />
+        <state relative-caret-position="-3884">
+          <caret line="11" column="79" selection-start-line="11" selection-start-column="72" selection-end-line="11" selection-end-column="79" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/not_found.html">
+    <entry file="file://$PROJECT_DIR$/dataQuery/albumDataQuery">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        <state relative-caret-position="12">
+          <caret line="16" column="129" selection-start-line="16" selection-start-column="129" selection-end-line="16" selection-end-column="129" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/albums.html">
+    <entry file="file://$PROJECT_DIR$/dataQuery/albumDataQuery.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="5" selection-start-line="40" selection-start-column="25" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="612">
+          <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/werkzeug/utils.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/flask/helpers.py" />
     <entry file="file://$PROJECT_DIR$/templates/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        <state relative-caret-position="136">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ScriptBD.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/users_repository.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-48" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/albums_repository.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="91" column="40" lean-forward="true" selection-end-line="102" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ScriptBDUser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="29" />
+        <state relative-caret-position="238">
+          <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/albums_service.py">
+    <entry file="file://$PROJECT_DIR$/service/users_service.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/artistes_repository.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        <state>
+          <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repository/albums_repository.py">
+    <entry file="file://$PROJECT_DIR$/templates/albums.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="326">
+          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/favorite_service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/favorite_repository.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="25" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -1210,56 +1445,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/repository/tracks_repository.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="75" selection-end-line="83" />
+        <state relative-caret-position="250">
+          <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repository/users_repository.py">
+    <entry file="file://$PROJECT_DIR$/service/tracks_service.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="18" />
+        <state relative-caret-position="136">
+          <caret line="8" column="45" lean-forward="true" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/users_service.py">
+    <entry file="file://$PROJECT_DIR$/templates/tracks.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        <state relative-caret-position="238">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="27" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repository/artistes_repository.py">
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="840" selection-start-line="840" selection-end-line="840" />
+        <state relative-caret-position="272">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
-          <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+        <state relative-caret-position="853">
+          <caret line="275" lean-forward="true" selection-start-line="275" selection-end-line="275" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ScriptBD.py">
+    <entry file="file://$PROJECT_DIR$/templates/includes/_navbar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="510">
+          <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
         </state>
       </provider>
     </entry>

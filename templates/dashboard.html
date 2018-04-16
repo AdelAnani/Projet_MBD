@@ -1,18 +1,23 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-  <h1>Dashboard <small> Welcome {{session.username}}</small></h1>
-  <a class="btn btn-success" href="/add_playlist"> add plylist</a>
+  <h1>Dashboard <small> Welcome {{session.name}}</small></h1>
+ <h3>voila tes favorite</h3>
+
       <div class="container">
-			{% for playlist in Playlists %}
-				  <div class="card-body">
-                      <li class="list-group-item >  <a class="btn btn-success" href="/add_playlist"> {{playlist.name}} </a>
-                      </li>
-
+			<div class="row">
+			{% for track in tracks %}
+				<div class="card col-md-4" style="width: 18rem;">
+					<div class="card-body">
+						<h3>{{track.name}}</h3>
+	            		<h3>{{track.duration}}</h3>
+	            	<p><a class="btn btn-secondary" href="tracks/{{track.id}}" role="button">Écouter chanson </a></p>
+					<p><a class="btn btn-secondary" href="tracks/add_track/{{track.id}}" role="button"> supprimer de la vaforite </a></p>
 				  </div>
-          {% endfor %}
-
-
+				</div>
+			{% endfor %}
+			</div>
+		</div>
 
 
 {% endblock %}
