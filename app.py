@@ -134,7 +134,7 @@ def albumss(id):
         album = albums_service.find_album_by_id(int(album_id))
         return render_template('album.html', album=album)
     except Exception as e:
-        return render_template('not_found.html')
+        redirect(url_for('albums'))
 
 
 @app.route('/albums/search')
@@ -144,7 +144,7 @@ def search_album_by_term():
     try:
         return render_template('album.html', album=albums_service.find_album_by_name(str(name_album)))
     except Exception as e:
-        return render_template('not_found.html')
+       return  redirect(url_for('albums'))
 
 
 
@@ -161,7 +161,7 @@ def artistesss(id):
              return render_template('artiste.html', artist= artistes_service.find_artiste_by_id(int(artiste_id)))
     except:
 
-        return render_template('not_found.html')
+         return  redirect(url_for('artistess'))
 
 @app.route('/Artistes/search')
 def search_artist_by_term():
@@ -171,7 +171,7 @@ def search_artist_by_term():
         return render_template('artiste.html', artist= artistes_service.find_artiste_by_name(name_artist))
     except :
 
-        return render_template('not_found.html')
+        return redirect(url_for('artistess'))
 @app.route('/tracks')
 def chanson():
     return render_template('tracks.html', tracks= tracks_service.get_all_tracks())
@@ -187,8 +187,7 @@ def search_track_by_term():
     try:
         return render_template('track.html', track=tracks_service.get_track_by_name(track_name))
     except:
-
-        return render_template('not_found.html')
+        return redirect(url_for('chanson'))
 
 
 class RegisterForm(Form):
