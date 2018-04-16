@@ -7,11 +7,13 @@ from wtforms import Form, StringField, PasswordField, validators
 from repository.albums_repository import  SqlAlbumsRepository
 from repository.artistes_repository import SQLArtistesRepository
 from repository.tracks_repository import SqlTracksRepository
-from repository.playlist_repository import JsonPlaylistRepository
+from repository.favorite_repository import SqlFavoriteRepository
+from service.favorite_service import FavoriteService
+
 
 from service.albums_service import AlbumsService
 from service.artistes_service import ArtistesService
-from service.playlist_service import PlaylistService
+from service.favorite_service import FavoriteService
 from service.tracks_service import TracksService
 
 app = Flask(__name__)
@@ -28,15 +30,19 @@ DBUsers_config = ['localhost','root','glo2005','MusikaUsers']
 album_repository = SqlAlbumsRepository(DB_config)
 albums_service = AlbumsService(album_repository)
 
+
 artistes_repository = SQLArtistesRepository(DB_config)
 artistes_service = ArtistesService(artistes_repository)
 
 track_repository = SqlTracksRepository(DB_config)
 tracks_service = TracksService(track_repository)
 
-playlist_repository = JsonPlaylistRepository("playlist.json")
+favorite_repository = SqlFavoriteRepository(DB_config)
+favotite_service = FavoriteService(favorite_repository)
 
-playlist_service = PlaylistService(playlist_repository)
+##playlist_repository = JsonPlaylistRepository("playlist.json")
+
+##playlist_service = PlaylistService(playlist_repository)
 
 
 
@@ -53,6 +59,14 @@ def is_logged_in(f):
 
     return wrap
 
+class RegisterForm(Form):
+    email = StringField('Email', [validators.length(min=4, max=50)])
+    name = StringField('Name', [validators.length(min=4, max=50)])
+    password = PasswordField('Password', [
+        validators.DataRequired(),
+        validators.EqualTo('confirm', message='Passwords do not match')
+    ])
+    confirm = PasswordField('Confirm Password')
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -61,24 +75,24 @@ def login():
         # Get Form Fields
         email = request.form['email']
         password_candidate = request.form['password']
-
-        connection = pymysql.connect(DBUsers_config[0],DBUsers_config[1],DBUsers_config[2],DBUsers_config[3])
+        connection = pymysql.connect(DBUsers_config[0], DBUsers_config[1], DBUsers_config[2], DBUsers_config[3])
         cur = connection.cursor()
 
         # Get user by username
         result = cur.execute("SELECT * FROM user WHERE userEmail = %s", [email])
-
         if result > 0:
             # Get stored hash
-            data = cur.fetchone()
-            password = data['password']
+            data = cur.fetchall()
 
-            # Compare Passwords
+            password = data[0][2]
+            name = data [0][3]
+            user_id = data [0][0]
             if sha256_crypt.verify(password_candidate, password):
                 # Passed
                 session['logged_in'] = True
+                session['user_id'] = user_id
                 session['email'] = email
-
+                session['name'] = name
                 flash('Vous êtes connecté à Musika !', 'success')
                 return redirect(url_for('dashboard'))
             else:
@@ -92,6 +106,24 @@ def login():
 
     return render_template('login.html')
 
+
+@app.route('/tracks/add_track/<int:id>')
+def favorit(id):
+    print(555555)
+    print(session)
+    user_id = session["user_id"]
+    id_track = id
+    print(555555)
+    connection = pymysql.connect(DB_config['host'], DB_config['user'], DB_config['password'], DB_config['db_name'])
+    cur = connection.cursor()
+
+    # Execute
+    cur.execute("INSERT INTO favorite(userId, trackId) VALUES(%s, %s)", (user_id, id_track))
+    # Commit to DB
+    connection.commit()
+    cur.close()
+    return redirect(url_for('chanson'))
+
 @app.route('/logout')
 @is_logged_in
 def logout():
@@ -103,7 +135,20 @@ def logout():
 @app.route('/dashboard')
 @is_logged_in
 def dashboard():
-    return render_template('dashboard.html', Playlists=playlist_service.get_all_playlists())
+    id_user = session["user_id"]
+    track_favorite = favotite_service.get_all_tracks(id_user)
+    print(track_favorite)
+    tracks_id = []
+    for track in track_favorite:
+        tracks_id.append(track["id_track"])
+    print(tracks_id)
+    track_list = []
+    for id in tracks_id:
+        print(id)
+        track = tracks_service.get_track_by_id(id)
+        track_list.append(track[0])
+        print(track_list)
+    return render_template('dashboard.html',tracks = track_list)
 
 
 @app.route('/')
@@ -112,11 +157,13 @@ def index():
 
 
 @app.route('/Albums')
+@is_logged_in
 def albums():
     return render_template('albums.html', Albums=albums_service.get_all_albums())
 
 
 @app.route('/albums/<int:id>/')
+@is_logged_in
 def albumss(id):
     album_id = id
     try:
@@ -127,6 +174,7 @@ def albumss(id):
 
 
 @app.route('/albums/search')
+@is_logged_in
 def search_album_by_term():
     name_album = request.args.get('term')
     print(str(name_album))
@@ -138,11 +186,13 @@ def search_album_by_term():
 
 
 @app.route('/Artistes')
+@is_logged_in
 def artistess():
     return render_template('artistes.html', Artistes= artistes_service.get_all_artistes())
 
 
 @app.route('/Artistes/<int:id>/')
+@is_logged_in
 def artistesss(id):
     artiste_id = id
     try:
@@ -153,6 +203,7 @@ def artistesss(id):
          return  redirect(url_for('artistess'))
 
 @app.route('/Artistes/search')
+@is_logged_in
 def search_artist_by_term():
     name_artist = request.args.get('term')
 
@@ -163,15 +214,18 @@ def search_artist_by_term():
         return redirect(url_for('artistess'))
 
 @app.route('/tracks')
+@is_logged_in
 def chanson():
     return render_template('tracks.html', tracks= tracks_service.get_all_tracks())
 
 @app.route('/tracks/<int:id>/')
+@is_logged_in
 def search_trsck_by_id(id):
     tack_id = id
     return render_template('track.html', track= tracks_service.get_track_by_id(tack_id))
 
 @app.route('/tracks/search')
+@is_logged_in
 def search_track_by_term():
     track_name = request.args.get('term')
 
@@ -181,13 +235,6 @@ def search_track_by_term():
         return redirect(url_for('chanson'))
 
 
-class RegisterForm(Form):
-    email = StringField('Email', [validators.length(min=6, max=50)])
-    password = PasswordField('Password', [
-        validators.DataRequired(),
-        validators.EqualTo('confirm', message='Passwords do not match')
-    ])
-    confirm = PasswordField('Confirm Password')
 
 
 
@@ -195,16 +242,18 @@ class RegisterForm(Form):
 def register():
     form = RegisterForm(request.form)
     if request.method == 'POST' and form.validate():
+        name = form.name.data
         email = form.email.data
         password = sha256_crypt.encrypt(str(form.password.data))
+        print((email, password, name))
 
         # Create cursor
         connection = pymysql.connect(DBUsers_config[0],DBUsers_config[1],DBUsers_config[2],DBUsers_config[3])
         cur = connection.cursor()
 
         # Execute query
-        cur.execute("INSERT INTO user(userEmail, userPassword) VALUES(%s, %s)",
-                    (email, password))
+        cur.execute("INSERT INTO user(userEmail, userPassword, name) VALUES(%s, %s,%s)",
+                    (email, password, name))
 
         # Commit to DB
         connection.commit()
@@ -214,8 +263,11 @@ def register():
 
         flash('Bienvenue sur Musika !', 'success')
 
-        return render_template('home.html')
+        return  redirect(url_for('dashboard'))
     return render_template('register.html', form=form)
+
+
+    # Create Cursor
 
 
 if __name__ == '__main__':
