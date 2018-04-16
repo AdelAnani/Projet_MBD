@@ -8,8 +8,6 @@ from repository.albums_repository import  SqlAlbumsRepository
 from repository.artistes_repository import SQLArtistesRepository
 from repository.tracks_repository import SqlTracksRepository
 from repository.favorite_repository import SqlFavoriteRepository
-from service.favorite_service import FavoriteService
-
 
 from service.albums_service import AlbumsService
 from service.artistes_service import ArtistesService
@@ -21,11 +19,11 @@ app = Flask(__name__)
 DB_config = {
     'host': 'localhost',
     'user': 'root',
-    'password': 'glo2005',
+    'password': 'Hazard10',
     'db_name': 'Musika'
 }
 
-DBUsers_config = ['localhost','root','glo2005','MusikaUsers']
+DBUsers_config = ['localhost','root','Hazard10','MusikaUsers']
 
 album_repository = SqlAlbumsRepository(DB_config)
 albums_service = AlbumsService(album_repository)
@@ -60,8 +58,7 @@ def is_logged_in(f):
     return wrap
 
 class RegisterForm(Form):
-    email = StringField('Email', [validators.length(min=4, max=50)])
-    name = StringField('Name', [validators.length(min=4, max=50)])
+    email = StringField('Adresse Courriel', [validators.length(min=4, max=50)])
     password = PasswordField('Password', [
         validators.DataRequired(),
         validators.EqualTo('confirm', message='Passwords do not match')
@@ -83,16 +80,13 @@ def login():
         if result > 0:
             # Get stored hash
             data = cur.fetchall()
-
             password = data[0][2]
-            name = data [0][3]
             user_id = data [0][0]
             if sha256_crypt.verify(password_candidate, password):
                 # Passed
                 session['logged_in'] = True
                 session['user_id'] = user_id
                 session['email'] = email
-                session['name'] = name
                 flash('Vous êtes connecté à Musika !', 'success')
                 return redirect(url_for('dashboard'))
             else:
@@ -119,6 +113,23 @@ def favorit(id):
 
     # Execute
     cur.execute("INSERT INTO favorite(userId, trackId) VALUES(%s, %s)", (user_id, id_track))
+    # Commit to DB
+    connection.commit()
+    cur.close()
+    return redirect(url_for('chanson'))
+
+@app.route('/tracks/delete_track/<int:id>')
+def deleteTrackFromFavorite(id):
+    print(555555)
+    print(session)
+    user_id = session["user_id"]
+    id_track = id
+    print(555555)
+    connection = pymysql.connect(DB_config['host'], DB_config['user'], DB_config['password'], DB_config['db_name'])
+    cur = connection.cursor()
+
+    # Execute
+    cur.execute("DELETE FROM favorite WHERE userId = %s AND trackId = %s ", (user_id, id_track))
     # Commit to DB
     connection.commit()
     cur.close()

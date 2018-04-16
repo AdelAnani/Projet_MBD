@@ -1,9 +1,11 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-  <h1>Dashboard <small> Welcome {{session.name}}</small></h1>
- <h3>voila tes favorite</h3>
-
+<br>
+ <h1>Profil</h1>
+<br>
+ <h3>Liste des chansons favorites</h3>
+<br>
       <div class="container">
 			<div class="row">
 			{% for track in tracks %}
@@ -12,7 +14,7 @@
 						<h3>{{track.name}}</h3>
 	            		<h3>{{track.duration}}</h3>
 	            	<p><a class="btn btn-secondary" href="tracks/{{track.id}}" role="button">Écouter chanson </a></p>
-					<p><a class="btn btn-secondary" href="tracks/add_track/{{track.id}}" role="button"> supprimer de la vaforite </a></p>
+					<p><a class="btn btn-secondary" href="tracks/delete_track/{{track.id}}" role="button"> Supprimer des favoris</a></p>
 				  </div>
 				</div>
 			{% endfor %}
