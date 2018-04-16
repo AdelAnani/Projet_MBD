@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Spotify</a>
+  <a class="navbar-brand" href="/">Spotify</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -23,7 +23,7 @@
       <ul class="navbar-nav ml-auto" >
         {% if session.logged_in %}
            <li class="nav-item">
-           <a class="nav-link" href="/logout">logout</a>
+           <a class="nav-link" href="/logout">Logout</a>
            </li>
            <liclass="nav-item">
              <a class="nav-link" href="/dashboard">Dashboard</a>
@@ -33,7 +33,7 @@
          <a class="nav-link" href="/register">Register</a>
          </li>
         <li class="nav-item">
-        <a class="nav-link" href="/login">login</a>
+        <a class="nav-link" href="/login">Login</a>
         </li>
         {% endif %}
       </ul>

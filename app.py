@@ -1,5 +1,5 @@
 from functools import wraps
-
+from passlib.hash import sha256_crypt
 import pymysql
 from flask import Flask, render_template, flash, redirect, url_for, session, request
 from wtforms import Form, StringField, PasswordField, validators
@@ -23,6 +23,7 @@ DB_config = {
     'db_name': 'Musika'
 }
 
+DBUsers_config = ['localhost','root','glo2005','MusikaUsers']
 
 album_repository = SqlAlbumsRepository(DB_config)
 albums_service = AlbumsService(album_repository)
@@ -33,8 +34,6 @@ artistes_service = ArtistesService(artistes_repository)
 track_repository = SqlTracksRepository(DB_config)
 tracks_service = TracksService(track_repository)
 
-
-
 playlist_repository = JsonPlaylistRepository("playlist.json")
 
 playlist_service = PlaylistService(playlist_repository)
@@ -42,16 +41,6 @@ playlist_service = PlaylistService(playlist_repository)
 
 
 ########################################
-class RegisterForm(Form):
-    name = StringField('Name', [validators.Length(min=1, max=50)])
-    username = StringField('Username', [validators.Length(min=4, max=25)])
-    email = StringField('Email', [validators.Length(min=6, max=50)])
-    password = PasswordField('Password', [
-        validators.DataRequired(),
-        validators.EqualTo('confirm', message='Passwords do not match')
-    ])
-    confirm = PasswordField('Confirm Password')
-
 
 def is_logged_in(f):
     @wraps(f)
@@ -65,49 +54,49 @@ def is_logged_in(f):
     return wrap
 
 
-#
-# @app.route('/login', methods=['GET', 'POST'])
-# def login():
-#     if request.method == 'POST':
-#         # Get Form Fields
-#         username = request.form['username']
-#         password_candidate = request.form['password']
-#
-#         # Create cursor
-#         cur = mysql.connection.cursor()
-#
-#         # Get user by username
-#         result = cur.execute("SELECT * FROM users WHERE username = %s", [username])
-#
-#         if result > 0:
-#             # Get stored hash
-#             data = cur.fetchone()
-#             password = data['password']
-#
-#             # Compare Passwords
-#             if sha256_crypt.verify(password_candidate, password):
-#                 # Passed
-#                 session['logged_in'] = True
-#                 session['username'] = username
-#
-#                 flash('You are now logged in', 'success')
-#                 return redirect(url_for('dashboard'))
-#             else:
-#                 error = 'Invalid login'
-#                 return render_template('login.html', error=error)
-#             # Close connection
-#             cur.close()
-#         else:
-#             error = 'Username not found'
-#             return render_template('login.html', error=error)
-#
-#     return render_template('login.html')
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        # Get Form Fields
+        email = request.form['email']
+        password_candidate = request.form['password']
+
+        connection = pymysql.connect(DBUsers_config[0],DBUsers_config[1],DBUsers_config[2],DBUsers_config[3])
+        cur = connection.cursor()
+
+        # Get user by username
+        result = cur.execute("SELECT * FROM user WHERE userEmail = %s", [email])
+
+        if result > 0:
+            # Get stored hash
+            data = cur.fetchone()
+            password = data['password']
+
+            # Compare Passwords
+            if sha256_crypt.verify(password_candidate, password):
+                # Passed
+                session['logged_in'] = True
+                session['email'] = email
+
+                flash('Vous êtes connecté à Musika !', 'success')
+                return redirect(url_for('dashboard'))
+            else:
+                error = 'Informations invalides'
+                return render_template('login.html', error=error)
+            # Close connection
+            cur.close()
+        else:
+            error = 'Email invalide'
+            return render_template('login.html', error=error)
+
+    return render_template('login.html')
 
 @app.route('/logout')
 @is_logged_in
 def logout():
     session.clear()
-    flash('You are now logged out', 'success')
+    flash('Vous êtes déconnecté', 'success')
     return redirect(url_for('login'))
 
 
@@ -172,9 +161,11 @@ def search_artist_by_term():
     except :
 
         return redirect(url_for('artistess'))
+
 @app.route('/tracks')
 def chanson():
     return render_template('tracks.html', tracks= tracks_service.get_all_tracks())
+
 @app.route('/tracks/<int:id>/')
 def search_trsck_by_id(id):
     tack_id = id
@@ -191,43 +182,40 @@ def search_track_by_term():
 
 
 class RegisterForm(Form):
-    name = StringField('Name', [validators.length(min=1, max=50)])
-    username = StringField('Username', [validators.length(min=4, max=25)])
     email = StringField('Email', [validators.length(min=6, max=50)])
     password = PasswordField('Password', [
         validators.DataRequired(),
         validators.EqualTo('confirm', message='Passwords do not match')
     ])
-    confirm = PasswordField('confirm Password')
+    confirm = PasswordField('Confirm Password')
 
 
-#
-# @app.route('/register', methods=['GET','POST'])
-# def register():
-#     form = RegisterForm(request.form)
-#     if request.method == 'POST' and form.validate():
-#         name = form.name.data
-#         email = form.email.data
-#         username = form.username.data
-#         password = sha256_crypt.encrypt(str(form.password.data))
-#
-#         # Create cursor
-#         cur = mysql.connection.cursor()
-#
-#         # Execute query
-#         cur.execute("INSERT INTO users(name, email, username, password) VALUES(%s, %s, %s, %s)",
-#                     (name, email, username, password))
-#
-#         # Commit to DB
-#         mysql.connection.commit()
-#
-#         # Close connection
-#         cur.close()
-#
-#         flash('You are now registered and can log in', 'success')
-#
-#         return render_template('not_found.html')
-#     return render_template('register.html', form=form)
+
+@app.route('/register', methods=['GET','POST'])
+def register():
+    form = RegisterForm(request.form)
+    if request.method == 'POST' and form.validate():
+        email = form.email.data
+        password = sha256_crypt.encrypt(str(form.password.data))
+
+        # Create cursor
+        connection = pymysql.connect(DBUsers_config[0],DBUsers_config[1],DBUsers_config[2],DBUsers_config[3])
+        cur = connection.cursor()
+
+        # Execute query
+        cur.execute("INSERT INTO user(userEmail, userPassword) VALUES(%s, %s)",
+                    (email, password))
+
+        # Commit to DB
+        connection.commit()
+
+        # Close connection
+        cur.close()
+
+        flash('Bienvenue sur Musika !', 'success')
+
+        return render_template('home.html')
+    return render_template('register.html', form=form)
 
 
 if __name__ == '__main__':

@@ -16,16 +16,15 @@
 </div>
 <br>
 <div class="container">
-    <h2 style="text-align: center"> Albumes de {{artist.name}} : </h2>
+    <h2 style="text-align: center"> Liste d'albums de {{artist.name}} : </h2>
 </div>
 <div class="container">
     <div class="row">
         {% for album in artist.albums %}
         <div class="card col-md-4" style="width: 18rem;">
-            <img src="{{album.image}}" style="height: 10rem">
+            <img src="{{album.image}}" style="height: 18rem">
             <div class="card-body">
                 <h3>{{album.name}}</h3>
-                <h10>{{album.description}}</h10>
                 <p><a class="btn btn-secondary" href=" ../../albums/{{album.id}}" role="button">Voir l'album</a></p>
             </div>
         </div>
