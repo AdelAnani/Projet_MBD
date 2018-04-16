@@ -1,9 +1,16 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-        <br>
-		<h1>Chansons</h1>
-		<p class="lead">Les chansons disponible sont .</p>
+<br>
+<h1 style = "display: inline-block">tracks</h1>
+<div class="row" style="display: inline-block; min-width: 80%;">
+    <div class="col-lg-6">
+        <div class="input-group">
+            <input  type="text" class="form-control" placeholder="Search for track.." onkeydown="goToSearch(this)"  value="">
+        </div><!-- /input-group -->
+	</div><!-- /.col-lg-6 -->
+</div>
+	<p class="lead">Les chansons disponible sont .</p>
 
 		<div class="container">
 			<div class="row">
@@ -19,4 +26,13 @@
 			{% endfor %}
 			</div>
 		</div>
+	<script>
+function goToSearch(el) {
+
+    if(event.key === 'Enter') {
+        var searchTerm = el.value;
+        window.location = "tracks/search?term=" + searchTerm;
+    }
+}
+</script>
 {% endblock %}

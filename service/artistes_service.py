@@ -8,6 +8,7 @@ class ArtistesService:
     def get_all_artistes(self):
         return self.artiste_repository.find_all_artistes()
 
+
     def find_artiste_by_id(self, artiste_id):
         artiste = self.artiste_repository.find_artiste_by_id(artiste_id)
 
@@ -15,6 +16,11 @@ class ArtistesService:
             raise ValueError("artiste not found")
         return artiste
 
+    def find_artiste_by_name(self, artiste_name):
+        artiste = self.artiste_repository.find_artiste_by_name(artiste_name)
 
+        if artiste is None:
+            raise ValueError("artiste not found")
+        return artiste
 
 

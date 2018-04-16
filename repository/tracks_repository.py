@@ -36,21 +36,48 @@ class SqlTracksRepository(TracksRepository):
         connection.close()
         return all_tracks_list
 
-    def find_tracks_by_id(self, track_id):
-        get_track_by_id_query = "SELECT * FROM track WHERE trackId = %s"
+    def find_track_by_id(self, track_id):
+        get_track_by_id_query = "SELECT track.trackId,track.trackName, track.trackDuration, album.albumName  FROM track,album WHERE track.trackId = %s and track.albumId = album.albumId "
+
         connection = self._get_db_connection()
         cursor = connection.cursor()
         cursor.execute(get_track_by_id_query, track_id)
         tracks_data_list = cursor.fetchall()
+
         list_tracks_id = []
         for row in tracks_data_list :
             list_tracks_id.append({
                 'id': row[0],
                 'name': row[1],
                 'duration': row[2],
-                'id_album': row[3]
+                'album_name': row[3]
                 })
-
         cursor.close()
         connection.close()
         return list_tracks_id
+
+    def find_track_by_name(self, track_name):
+
+        get_track_by_id_query = "SELECT track.trackId,track.trackName, track.trackDuration, album.albumName  FROM track,album WHERE track.trackName = %s and track.albumId = album.albumId "
+        connection = self._get_db_connection()
+        cursor = connection.cursor()
+        cursor.execute(get_track_by_id_query, track_name)
+        tracks_data_list = cursor.fetchall()
+
+        if len(tracks_data_list)> 0 :
+            list_tracks_name = []
+            for row in tracks_data_list:
+                list_tracks_name.append({
+                    'id': row[0],
+                    'name': row[1],
+                    'duration': row[2],
+                    'album_name': row[3]
+                })
+
+            cursor.close()
+            connection.close()
+        else :
+            list_tracks_name = None
+        return list_tracks_name
+
+

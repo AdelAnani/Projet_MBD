@@ -16,7 +16,7 @@ class AlbumsService:
         return album
 
     def find_album_by_name(self, album_name):
-        album = self.AlbumsReseachRepository.find_album_by_name(album_name)
+        album = self.albums_repository.find_album_by_name(album_name)
         if album is None:
             raise ValueError("album not found")
         return album
