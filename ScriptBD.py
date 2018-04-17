@@ -48,14 +48,17 @@ cursor.execute(queryCreateTableArtistAlbum)
 cursor.execute(queryCreateTableArtistTrack)
 cursor.execute(queryCreateTableAlbumTrack)
 
-queryAddIndexTableArtistName = 'CREATE UNIQUE INDEX artistName_idx ON `artist` (artistName) USING HASH'
-queryAddIndexTableAlbumName = 'CREATE UNIQUE INDEX albumName_idx ON `album` (albumName) USING HASH'
-queryAddIndexTableTrackName = 'CREATE UNIQUE INDEX trackName_idx ON `track` (trackName) USING HASH'
+queryAddIndexTableArtistName = 'CREATE INDEX artistName_idx ON `artist` (artistName) USING HASH'
+queryAddIndexTableAlbumName = 'CREATE INDEX albumName_idx ON `album` (albumName) USING HASH'
+queryAddIndexTableTrackName = 'CREATE INDEX trackName_idx ON `track` (trackName) USING HASH'
+queryAddIndexTablealbumtrack = 'CREATE INDEX trackAlbum_idx ON `albumtrack` (albumId,trackId) USING HASH'
+queryAddIndexTartistalbum = 'CREATE INDEX trackAlbum_idx ON `artistalbum` (artistId,albumId) USING HASH'
 
 cursor.execute(queryAddIndexTableArtistName)
 cursor.execute(queryAddIndexTableAlbumName)
 cursor.execute(queryAddIndexTableTrackName)
-
+cursor.execute(queryAddIndexTablealbumtrack)
+cursor.execute(queryAddIndexTartistalbum)
 cursor.close()
 createBD.close()
 
