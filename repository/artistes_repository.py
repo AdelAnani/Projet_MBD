@@ -38,12 +38,11 @@ class SQLArtistesRepository(ArtistesRepository):
         return all_artistes_list
 
     def find_artiste_by_id(self, artiste_id):
-        get_artists_by_id_query = "SELECT * FROM artist , album WHERE artist.artistId = %s and artist.artistId = album.artistId  "
+        get_artists_by_id_query = "SELECT *  FROM artist, album, artistalbum WHERE artist.artistId = %s and artist.artistId = artistalbum.artistId and  album.albumId = artistalbum.albumId   "
         connection = self._get_db_connection()
         cursor = connection.cursor()
         cursor.execute(get_artists_by_id_query, artiste_id)
         artist_data_list = cursor.fetchall()
-
         artist = {
             'id': artist_data_list[0][0],
             'name': artist_data_list[0][1],
@@ -67,7 +66,7 @@ class SQLArtistesRepository(ArtistesRepository):
         return artist
 
     def find_artiste_by_name(self, artiste_name):
-        get_artists_by_name_query = "SELECT * FROM artist, album WHERE artist.artistName = %s and artist.artistId = album.artistId "
+        get_artists_by_name_query = "SELECT *  FROM artist, album, artistalbum WHERE artist.artistName = %s and artist.artistId = artistalbum.artistId and  album.albumId = artistalbum.albumId   "
         connection = self._get_db_connection()
         cursor = connection.cursor()
         cursor.execute(get_artists_by_name_query, artiste_name)
@@ -87,7 +86,7 @@ class SQLArtistesRepository(ArtistesRepository):
                     'name': row[5],
                     'description': row[6],
                     'image': row[7],
-                    'date_release': row[8],
+
 
                 })
             connection.close()

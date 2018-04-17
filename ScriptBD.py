@@ -19,7 +19,13 @@ readArtistAlbumData.close()
 readArtistTrackData.close()
 readAlbumTrackData.close()
 
-createBD = pymysql.connect(host="localhost",user="root",password="Hazard10")
+DB_config = {
+    'host': 'localhost',
+    'user': 'root',
+    'password': 'glo2005',
+}
+
+createBD = pymysql.connect(host= DB_config ['host'] ,user= DB_config ['user'],password= DB_config['password'])
 cursor = createBD.cursor()
 
 queryCreateBD = 'CREATE DATABASE Musika;'
@@ -53,7 +59,7 @@ cursor.execute(queryAddIndexTableTrackName)
 cursor.close()
 createBD.close()
 
-BD = pymysql.connect(host="localhost", user="root", password="Hazard10", db="Musika")
+BD = pymysql.connect(host= DB_config ['host'] ,user= DB_config ['user'],password= DB_config['password'])
 cursor2 = BD.cursor()
 
 for artistData in artistDatas:
@@ -89,7 +95,7 @@ for albumTrackData in albumTrackDatas:
 cursor2.close()
 BD.close()
 
-createBD2 = pymysql.connect(host="localhost",user="root",password="Hazard10")
+createBD2 = pymysql.connect(host= DB_config ['host'] ,user= DB_config ['user'],password= DB_config['password'])
 cursor3 = createBD2.cursor()
 
 queryCreateBD2 = 'CREATE DATABASE MusikaUsers;'

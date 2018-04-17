@@ -19,10 +19,16 @@ app = Flask(__name__)
 DB_config = {
     'host': 'localhost',
     'user': 'root',
-    'password': 'Hazard10',
+    'password': 'glo2005',
     'db_name': 'Musika'
 }
-DBUsers_config = ['localhost','root','Hazard10','MusikaUsers']
+DBUsers_config = {
+    'host': 'localhost',
+    'user': 'root',
+    'password': 'glo2005',
+    'db_name': 'MusikaUsers'
+}
+
 
 album_repository = SqlAlbumsRepository(DB_config)
 albums_service = AlbumsService(album_repository)
@@ -60,7 +66,7 @@ def login():
     if request.method == 'POST':
         email = request.form['email']
         password_candidate = request.form['password']
-        connection = pymysql.connect(DBUsers_config[0], DBUsers_config[1], DBUsers_config[2], DBUsers_config[3])
+        connection = pymysql.connect(DBUsers_config['host'], DBUsers_config['user'], DBUsers_config['password'], DBUsers_config['db_name'])
         cur = connection.cursor()
         result = cur.execute("SELECT * FROM user WHERE userEmail = %s", [email])
         if result > 0:
@@ -91,10 +97,20 @@ def favorit(id):
     id_track = id
     connection = pymysql.connect(DB_config['host'], DB_config['user'], DB_config['password'], DB_config['db_name'])
     cur = connection.cursor()
-    cur.execute("INSERT INTO favorite(userId, trackId) VALUES(%s, %s)", (user_id, id_track))
+    result = cur.execute("SELECT trackId FROM favorite WHERE trackId = %s", id_track)
     connection.commit()
     cur.close()
+    if result > 0:
+        return redirect(url_for('dashboard'))
+    else:
+        connection = pymysql.connect(DB_config['host'], DB_config['user'], DB_config['password'], DB_config['db_name'])
+        cur = connection.cursor()
+        cur.execute("INSERT INTO favorite(userId, trackId) VALUES(%s, %s)", (user_id, id_track))
+        connection.commit()
+        cur.close()
+        return redirect(url_for('dashboard'))
     return redirect(url_for('dashboard'))
+
 
 
 @app.route('/tracks/delete_track/<int:id>')
@@ -220,14 +236,23 @@ def register():
         name = form.name.data
         email = form.email.data
         password = sha256_crypt.encrypt(str(form.password.data))
-        connection = pymysql.connect(DBUsers_config[0],DBUsers_config[1],DBUsers_config[2],DBUsers_config[3])
+        connection = pymysql.connect(DBUsers_config['host'], DBUsers_config['user'], DBUsers_config['password'], DBUsers_config['db_name'])
         cur = connection.cursor()
-        cur.execute("INSERT INTO user(userEmail, userPassword, name) VALUES(%s, %s,%s)",
-                    (email, password, name))
+        result = cur.execute("SELECT userEmail FROM  user WHERE userEmail = %s",email)
         connection.commit()
         cur.close()
-        flash('Bienvenue sur Musika !', 'success')
-        return  redirect(url_for('dashboard'))
+        if  result > 0 :
+             return render_template('register.html', form=form)
+        else:
+            connection = pymysql.connect(DBUsers_config['host'], DBUsers_config['user'], DBUsers_config['password'],
+                                         DBUsers_config['db_name'])
+            cur = connection.cursor()
+            cur.execute("INSERT INTO user(userEmail, userPassword, name) VALUES(%s, %s,%s)",
+                    (email, password, name))
+            connection.commit()
+            cur.close()
+            flash('Bienvenue sur Musika !', 'success')
+            return  redirect(url_for('dashboard'))
     return render_template('register.html', form=form)
 
 if __name__ == '__main__':

@@ -18,7 +18,7 @@ class SqlTracksRepository(TracksRepository):
         return pymysql.connect(self.host, self.user, self.password, self.db_name)
 
     def find_all_tracks(self,):
-        get_all_tracks_query = "SELECT * FROM track"
+        get_all_tracks_query = "SELECT track.trackId, track.trackName, track.trackDuration,album.albumName  FROM track,albumtrack,album WHERE track.trackId = albumtrack.trackId AND album.albumId = albumtrack.albumId "
         connection = self._get_db_connection()
         cursor = connection.cursor()
         cursor.execute(get_all_tracks_query)
@@ -29,14 +29,15 @@ class SqlTracksRepository(TracksRepository):
              'id': row[0],
              'name': row[1],
              'duration': row[2],
-             'id_album': row[3]
+             'name_album': row[3]
             })
+            ##print(all_tracks_list)
         cursor.close()
         connection.close()
         return all_tracks_list
 
     def find_track_by_id(self, track_id):
-        get_track_by_id_query = "SELECT track.trackId,track.trackName, track.trackDuration, album.albumName  FROM track,album WHERE track.trackId = %s and track.albumId = album.albumId "
+        get_track_by_id_query = "SELECT track.trackId, track.trackName, track.trackDuration,album.albumName  FROM track,albumtrack,album WHERE track.trackId = albumtrack.trackId AND album.albumId = albumtrack.albumId  AND track.trackId = %s"
 
         connection = self._get_db_connection()
         cursor = connection.cursor()
@@ -57,7 +58,7 @@ class SqlTracksRepository(TracksRepository):
 
     def find_track_by_name(self, track_name):
 
-        get_track_by_id_query = "SELECT track.trackId,track.trackName, track.trackDuration, album.albumName  FROM track,album WHERE track.trackName = %s and track.albumId = album.albumId "
+        get_track_by_id_query = "SELECT track.trackId, track.trackName, track.trackDuration,album.albumName  FROM track,albumtrack,album WHERE track.trackId = albumtrack.trackId AND album.albumId = albumtrack.albumId  AND track.trackName = %s"
         connection = self._get_db_connection()
         cursor = connection.cursor()
         cursor.execute(get_track_by_id_query, track_name)
@@ -75,6 +76,7 @@ class SqlTracksRepository(TracksRepository):
 
             cursor.close()
             connection.close()
+            print(list_tracks_name)
         else :
             list_tracks_name = None
         return list_tracks_name

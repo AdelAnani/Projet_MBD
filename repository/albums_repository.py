@@ -18,7 +18,7 @@ class SqlAlbumsRepository(AlbumsRepository):
         return pymysql.connect(self.host, self.user, self.password, self.db_name)
 
     def find_all_albums(self):
-        get_all_artists_query = "SELECT album.albumId, album.albumName, album.albumPhoto, artist.artistName  FROM album, artist WHERE album.artistId = artist.artistId"
+        get_all_artists_query = "SELECT album.albumId, album.albumName, album.albumPhoto, artist.artistName  FROM album,artistalbum, artist WHERE album.albumId = artistalbum.albumId AND artistalbum.artistId = artist.artistId "
         connection = self._get_db_connection()
         cursor = connection.cursor()
         cursor.execute(get_all_artists_query)
@@ -39,7 +39,7 @@ class SqlAlbumsRepository(AlbumsRepository):
 
     def find_album_by_id(self, album_id):
 
-        getAlbumByIdQuery = "SELECT * FROM album, track WHERE album.albumId = %s and track.albumId = album.albumId"
+        getAlbumByIdQuery = "SELECT *  FROM album,albumtrack, track WHERE album.albumId = albumtrack.albumId AND albumtrack.trackId = track.trackId AND album.albumId = %s "
         connection = self._get_db_connection()
         cursor = connection.cursor()
         cursor.execute(getAlbumByIdQuery, album_id)
@@ -67,7 +67,7 @@ class SqlAlbumsRepository(AlbumsRepository):
         return album
     def find_album_by_name (self, album_name):
 
-        get_album_by_name_query = "SELECT * FROM album, track WHERE album.albumName = %s and track.albumId = album.albumId"
+        get_album_by_name_query = "SELECT *  FROM album,albumtrack, track WHERE album.albumId = albumtrack.albumId AND albumtrack.trackId = track.trackId AND album.albumName = %s "
         connection = self._get_db_connection()
         cursor = connection.cursor()
         cursor.execute(get_album_by_name_query, album_name)
