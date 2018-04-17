@@ -931,7 +931,8 @@
         <item itemvalue="Python.ScriptBDUser" />
         <item itemvalue="Python.ScriptBD" />
         <item itemvalue="Python.app" />
-        <item itemvalue="Python.app" />
+        <item itemvalue="Python.ScriptBDUser" />
+        <item itemvalue="Python.ScriptBD" />
       </list>
     </recent_temporary>
   </component>
