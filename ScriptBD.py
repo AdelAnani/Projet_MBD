@@ -1,5 +1,8 @@
 import pymysql
 
+print('Entrez votre mot de passe MySQL : ')
+password = input()
+
 readArtistData = open("dataQuery/artistDataQuery.txt", 'r')
 readAlbumData = open("dataQuery/albumDataQuery.txt", 'r')
 readTrackData = open("dataQuery/trackDataQuery.txt", 'r')
@@ -22,7 +25,7 @@ readAlbumTrackData.close()
 DB_config = {
     'host': 'localhost',
     'user': 'root',
-    'password': 'glo2005',
+    'password': password,
 }
 
 createBD = pymysql.connect(host= DB_config ['host'] ,user= DB_config ['user'],password= DB_config['password'])

@@ -16,16 +16,19 @@ from service.tracks_service import TracksService
 
 app = Flask(__name__)
 
+print('Entrez votre mot de passe MySQL : ')
+password = input()
+
 DB_config = {
     'host': 'localhost',
     'user': 'root',
-    'password': 'glo2005',
+    'password': password,
     'db_name': 'Musika'
 }
 DBUsers_config = {
     'host': 'localhost',
     'user': 'root',
-    'password': 'glo2005',
+    'password': password,
     'db_name': 'MusikaUsers'
 }
 
