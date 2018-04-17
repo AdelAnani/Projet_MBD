@@ -69,7 +69,8 @@ class SQLArtistesRepository(ArtistesRepository):
         get_artists_by_name_query = "SELECT *  FROM artist, album, artistalbum WHERE artist.artistName = %s and artist.artistId = artistalbum.artistId and  album.albumId = artistalbum.albumId   "
         connection = self._get_db_connection()
         cursor = connection.cursor()
-        cursor.execute(get_artists_by_name_query, artiste_name)
+        cursor.execute(get_artists_by_name_query, artiste_name )
+
         artist_data_list = cursor.fetchall()
         if len(artist_data_list)> 0:
             artist = {

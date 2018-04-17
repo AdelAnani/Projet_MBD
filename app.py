@@ -97,20 +97,10 @@ def favorit(id):
     id_track = id
     connection = pymysql.connect(DB_config['host'], DB_config['user'], DB_config['password'], DB_config['db_name'])
     cur = connection.cursor()
-    result = cur.execute("SELECT trackId FROM favorite WHERE trackId = %s", id_track)
+    cur.execute("INSERT INTO favorite(userId, trackId) VALUES(%s, %s)", (user_id, id_track))
     connection.commit()
     cur.close()
-    if result > 0:
-        return redirect(url_for('dashboard'))
-    else:
-        connection = pymysql.connect(DB_config['host'], DB_config['user'], DB_config['password'], DB_config['db_name'])
-        cur = connection.cursor()
-        cur.execute("INSERT INTO favorite(userId, trackId) VALUES(%s, %s)", (user_id, id_track))
-        connection.commit()
-        cur.close()
-        return redirect(url_for('dashboard'))
     return redirect(url_for('dashboard'))
-
 
 
 @app.route('/tracks/delete_track/<int:id>')
