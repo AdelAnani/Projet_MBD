@@ -1,21 +1,29 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-        <p class="lead">bon écoute...</p>
+
+<br>
 <div class="container">
 			<div class="row">
 			{% for track in track %}
 
-				<div class="card col-md-4" style="width: 18rem;">
-					<div class="card-body">
-						<h2> Name :    {{track.name}}</h2>
-	            		<h4> Duration:   {{track.duration}}</h4>
-                        <h5>Album :     {{track.album_name}}</h5>
-                        <audio controls>
-  <source src="https://archive.org/download/StarWarsThemeSongByJohnWilliams/Star%20Wars%20Theme%20Song%20By%20John%20Williams.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-
+				<div class="col-md-12">
+					<div class="card" style="padding: 10px">
+						<div class="row">
+							<div class="col-md-4">
+								<h2>Titre :    {{track.name}}</h2>
+								<h5>Durée :   {{track.duration}}</h5>
+							</div>
+							<div class="col-md-4">
+								<h2>Album :     {{track.album_name}}</h2>
+								<audio controls><source src="https://archive.org/download/StarWarsThemeSongByJohnWilliams/Star%20Wars%20Theme%20Song%20By%20John%20Williams.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+							</div>
+							<div class="col-md-2"></div>
+							<div class="col-md-2">
+								<p><a class="btn btn-secondary" href="../../tracks/add_track/{{track.id}}" role="button"> Ajouter au favoris </a></p>
+							</div>
+						</div>
+					</div>
 				  </div>
 				</div>
 			{% endfor %}

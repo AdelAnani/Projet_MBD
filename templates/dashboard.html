@@ -2,24 +2,35 @@
 
 {% block body %}
 <br>
- <h1>Profil</h1>
+  <h1>Bienvenue {{session.name}} !</h1>
 <br>
- <h3>Liste des chansons favorites</h3>
-<br>
-      <div class="container">
-			<div class="row">
-			{% for track in tracks %}
-				<div class="card col-md-4" style="width: 18rem;">
-					<div class="card-body">
-						<h3>{{track.name}}</h3>
-	            		<h3>{{track.duration}}</h3>
-	            	<p><a class="btn btn-secondary" href="tracks/{{track.id}}" role="button">Écouter chanson </a></p>
-					<p><a class="btn btn-secondary" href="tracks/delete_track/{{track.id}}" role="button"> Supprimer des favoris</a></p>
-				  </div>
+<div class="container">
+	<h2 style="text-align: center">Liste de vos favoris</h2>
+    <br>
+	<div class="row">
+	{% for track in tracks %}
+		<div class="col-md-1"></div>
+		<div class="col-md-10" style="margin-top: 10px;margin-bottom: 10px">
+			<div class="card" style="padding: 10px">
+				<div class="row">
+					<div class="col-md-4">
+						<h5>Titre :    {{track.name}}</h5>
+						<h5>Durée :   {{track.duration}}</h5>
+					</div>
+					<div class="col-md-5">
+						<h5>Album :     {{track.album_name}}</h5>
+						<audio controls><source src="https://archive.org/download/StarWarsThemeSongByJohnWilliams/Star%20Wars%20Theme%20Song%20By%20John%20Williams.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+					</div>
+					<div class="col-md-2">
+						<p><a class="btn btn-secondary" href="tracks/delete_track/{{track.id}}" role="button"> Supprimer des favoris</a></p>
+					</div>
 				</div>
-			{% endfor %}
 			</div>
 		</div>
-
+		<div class="col-md-1"></div>
+		{% endfor %}
+		</div>
+	</div>
+</div>
 
 {% endblock %}

@@ -1,6 +1,5 @@
 import pymysql
 
-
 readArtistData = open("dataQuery/artistDataQuery.txt", 'r')
 readAlbumData = open("dataQuery/albumDataQuery.txt", 'r')
 readTrackData = open("dataQuery/trackDataQuery.txt", 'r')
@@ -11,7 +10,7 @@ readArtistData.close()
 readAlbumData.close()
 readTrackData.close()
 
-createBD = pymysql.connect(host="localhost",user="root",password="glo2005")
+createBD = pymysql.connect(host="localhost",user="root",password="Hazard10")
 cursor = createBD.cursor()
 
 queryCreateBD = 'CREATE DATABASE Musika;'
@@ -28,10 +27,18 @@ cursor.execute(queryCreateTableAlbum)
 cursor.execute(queryCreateTableTrack)
 cursor.execute(queryCreateTableFavorite)
 
+queryAddIndexTableArtistName = 'CREATE UNIQUE INDEX artistName_idx ON `artist` (artistName) USING HASH'
+queryAddIndexTableAlbumName = 'CREATE UNIQUE INDEX albumName_idx ON `album` (albumName) USING HASH'
+queryAddIndexTableTrackName = 'CREATE UNIQUE INDEX trackName_idx ON `track` (trackName) USING HASH'
+
+cursor.execute(queryAddIndexTableArtistName)
+cursor.execute(queryAddIndexTableAlbumName)
+cursor.execute(queryAddIndexTableTrackName)
+
 cursor.close()
 createBD.close()
 
-BD = pymysql.connect(host="localhost", user="root", password="glo2005", db="Musika")
+BD = pymysql.connect(host="localhost", user="root", password="Hazard10", db="Musika")
 cursor2 = BD.cursor()
 
 for artistData in artistDatas:
@@ -51,3 +58,19 @@ for trackData in trackDatas:
 
 cursor2.close()
 BD.close()
+
+createBD2 = pymysql.connect(host="localhost",user="root",password="Hazard10")
+cursor3 = createBD2.cursor()
+
+queryCreateBD2 = 'CREATE DATABASE MusikaUsers;'
+queryUseBD2 = 'USE MusikaUsers;'
+queryCreateTableUser= 'CREATE TABLE `user` (`userId` INT NOT NULL AUTO_INCREMENT, `userEmail` VARCHAR(50) NOT NULL, `userPassword` VARCHAR(100) NOT NULL, PRIMARY KEY (`userId`), `name` VARCHAR(50) NOT NULL );'
+queryIndexTableUserEmail = 'CREATE UNIQUE INDEX userEmail_idx ON `user` (userEmail) USING HASH'
+
+cursor3.execute(queryCreateBD2)
+cursor3.execute(queryUseBD2)
+cursor3.execute(queryCreateTableUser)
+cursor3.execute(queryIndexTableUserEmail)
+
+cursor3.close()
+createBD2.close()

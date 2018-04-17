@@ -1,8 +1,5 @@
 import pymysql
 
-from utils import load_json
-
-# albums repository interface
 class AlbumsRepository:
     def find_all_albums(self):
         raise NotImplemented("must be implemented")
@@ -41,7 +38,6 @@ class SqlAlbumsRepository(AlbumsRepository):
 
 
     def find_album_by_id(self, album_id):
-
 
         getAlbumByIdQuery = "SELECT * FROM album, track WHERE album.albumId = %s and track.albumId = album.albumId"
         connection = self._get_db_connection()

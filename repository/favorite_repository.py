@@ -1,8 +1,5 @@
 import pymysql
 
-from utils import load_json
-
-# albums repository interface
 class FavoriteRepository:
     def find_all_tracks(self):
         raise NotImplemented("must be implemented")

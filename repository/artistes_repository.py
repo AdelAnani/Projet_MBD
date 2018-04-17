@@ -1,7 +1,5 @@
-from utils import load_json
 import pymysql
 
-# artisterepository interface
 class ArtistesRepository:
     def find_all_artistes(self):
         raise NotImplemented("must be implemented")

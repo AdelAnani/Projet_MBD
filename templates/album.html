@@ -15,18 +15,34 @@
     </div>
 </div>
 <br>
+
 <div class="container">
     <h2 style="text-align: center">Liste des chanson de l'album {{album.name}}</h2>
-    <div class="row">
+	<div class="row">
         {% for track in album.tracks %}
-        <div class="card col-md-4" style="width: 18rem;">
-            <div class="card-body">
-                <h3>{{track.tackName}}</h3>
-                <h3>{{track.trackDuration}}</h3>
-                <p><a class="btn btn-secondary" href="../../tracks/{{track.trackId}}" role="button">Écouter la chanson</a></p>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
+		<div class="col-md-1"></div>
+		<div class="col-md-10" style="margin-top: 10px;margin-bottom: 10px">
+			<div class="card" style="padding: 10px">
+				<div class="row">
+					<div class="col-md-6">
+						<h3>Titre :    {{track.trackName}}</h3>
+						<h5>Durée :   {{track.trackDuration}}</h5>
+						<h5>id :   {{track.trackId}}</h5>
+					</div>
+					<div class="col-md-3">
+					</div>
+					<div class="col-md-3">
+                    <p><a class="btn btn-secondary" href="../../tracks/{{track.trackId}}" role="button">Écouter la chanson</a></p>
+                    <p><a class="btn btn-secondary" href="../../tracks/add_track/{{track.trackId}}" role="button">Ajouter aux favoris</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+		{% endfor %}
+		</div>
+	</div>
 </div>
+<br>
+
     {% endblock %}

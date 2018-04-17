@@ -1,26 +1,34 @@
 {% extends 'layout.html' %}
 
 {% block body %}
+
 <br>
-<h1 style="display: inline-block">Albums</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+            <h1 style="display: inline-block">Albums</h1>
+		</div>
+		<div class="col-md-4">
+			<div class="input-group">
+            <input  type="text" class="form-control" placeholder="Rechercher" onkeydown="goToSearch(this)"  value="">
+			</div>
+		</div>
+    </div>
+	</div>
+</div>
 <br>
-<!--<div class="row" style="display: inline-block; min-width: 80%;">
-    <div class="col-lg-6">
-        <div class="input-group">
-            <input  type="text" class="form-control" placeholder="Search for..." onkeydown="goToSearch(this)"  value="">
-        </div>&lt;!&ndash; /input-group &ndash;&gt;
-    </div>&lt;!&ndash; /.col-lg-6 &ndash;&gt;
-</div>-->
 
 <div class="container">
     <div class="row">
         {% for album in Albums %}
-        <div class="card col-md-4" style="width: 18rem;">
-            <img src="{{album.image}}" style="height: 18rem">
-            <div class="card-body">
-                <h3>{{album.name}}</h3>
-                <h5>{{album.artist}}</h5>
-                <p><a class="btn btn-secondary" href="albums/{{album.id}}" role="button">album</a> <a class="btn btn-secondary" href="albums/{{album.id}}" role="button">Add to favorite </a></p>
+        <div class="col-md-4" style="padding: 10px">
+            <div class="card">
+                <img src="{{album.image}}" style="height: 18rem">
+                <div class="card-body">
+                    <h3>{{album.name}}</h3>
+                    <h5>{{album.artist}}</h5>
+                    <p><a class="btn btn-secondary" href="albums/{{album.id}}" role="button">Voir l'album</a></p>
+                </div>
             </div>
         </div>
         {% endfor %}

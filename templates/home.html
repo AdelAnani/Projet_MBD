@@ -3,7 +3,28 @@
 {% block body %}
 <br>
 <div class="jumbotron test-center">
-    <h1>Spotify</h1>
-    <p class="lead">Music Live Streaming</p>
+    <div class="container" style="text-align: center">
+
+        {% if session.logged_in %}
+
+        <h1 class="jumbotron-heading">Musika!</h1>
+        <br>
+        <p class="lead text-muted">Bienvenue sur la plateforme musicale la plus populaire au monde. Écoutez vos chansons préférés partout, n'importe quand! </p>
+
+        {% else %}
+
+
+        <h1 class="jumbotron-heading">Musika!</h1>
+        <br>
+        <p class="lead text-muted">Bienvenue sur la plateforme musicale la plus populaire au monde. Écoutez vos chansons préférés partout, n'importe quand! </p>
+        <p>
+            <a href="/register" class="btn btn-primary my-2">S'enregistrer</a>
+            <a href="/login" class="btn btn-secondary my-2">Se connecter</a>
+        </p>
+
+        {% endif %}
+
+    </div>
+
 </div>
 {% endblock %}

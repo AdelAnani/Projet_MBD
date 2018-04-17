@@ -1,6 +1,5 @@
 import pymysql
 
-# artisterepository interface
 class TracksRepository:
     def find_all_tracks(self):
         raise NotImplemented("must be implemented")

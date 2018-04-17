@@ -2,31 +2,39 @@
 
 {% block body %}
 <br>
-<h1 style = "display: inline-block">Artistes</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<h1 style = "display: inline-block">Artistes</h1>
+		</div>
+		<div class="col-md-4">
+			<div class="input-group">
+				<input  type="text" class="form-control" placeholder="Rechercher" onkeydown="goToSearch(this)"  value="">
+			</div>
+		</div>
+    </div>
+	</div>
+</div>
 <br>
 
-<!--<div class="row" style="display: inline-block; min-width: 80%;">
-    <div class="col-lg-6">
-        <div class="input-group">
-            <input  type="text" class="form-control" placeholder="Search for artist.." onkeydown="goToSearch(this)"  value="">
-        </div>&lt;!&ndash; /input-group &ndash;&gt;
-    </div>&lt;!&ndash; /.col-lg-6 &ndash;&gt;
-</div>-->
 
 
 <div class="container">
-			<div class="row">
-			{% for artiste in Artistes%}
-				<div class="card col-md-4" style="width: 18rem;">
-				  <img src="{{artiste.image}}" style="height: 18rem">
-				  <div class="card-body">
-	            	<h3>{{artiste.name}}</h3>
-	            	<p><a class="btn btn-secondary" href="Artistes/{{artiste.id}}" role="button"> Voir ces albums</a></p>
-				  </div>
-				</div>
-			{% endfor %}
+	<div class="row">
+	{% for artiste in Artistes%}
+		<div class="col-md-4" style="padding: 10px">
+			<div class="card">
+			  <img src="{{artiste.image}}" style="height: 18rem">
+			  <div class="card-body">
+				<h3>{{artiste.name}}</h3>
+				<p><a class="btn btn-secondary" href="Artistes/{{artiste.id}}" role="button">Voir l'artiste</a></p>
+			  </div>
 			</div>
+		</div>
+	{% endfor %}
+	</div>
 </div>
+
 <script>
 function goToSearch(el) {
 
